@@ -6,6 +6,6 @@
     <title>Workshops</title>
 </head>
 <body>
-    
+    <h1>Workshops</h1>
 </body>
 </html>
