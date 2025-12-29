@@ -179,10 +179,10 @@ html {
 }
 
 body {
+    /* background-color: #1a1a1a; */
     text-transform: capitalize;
     font-size: var(--fs-base);
     color: var(--text-main);
-    background-color: var(--body-bg);
     line-height: var(--lh-normal);
     overflow-x: hidden;
     transition: background-color var(--transition-normal), color var(--transition-normal);
