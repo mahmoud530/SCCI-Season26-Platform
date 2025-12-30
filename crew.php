@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="./assets/css/crew.css" />
 </head>
 
-<body>
+<body >
 
     <section class="sectionBlock container">
         <h1 class="mainTitle">President</h1>
-
+         <div class="section-divider"></div>
         <div class="presidentGrid">
             <div class="flipCard">
                 <div class="flipInner">
