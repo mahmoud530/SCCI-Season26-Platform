@@ -42,30 +42,22 @@
     ===================================*/
   --color-parchment: #e0c08f;
 
-  --gradient-blue-fade: linear-gradient(
-    90deg,
-    #1d44b3 23%,
-    rgba(32, 68, 179, 0.07) 88%,
-    rgba(33, 68, 179, 0) 94%
-  );
-  --gradient-purple-fade: linear-gradient(
-    90deg,
-    #673ab7 0%,
-    rgba(103, 58, 183, 0) 94%
-  );
-  --gradient-nav-red: linear-gradient(
-    90deg,
-    #5f1212 0%,
-    #c52525 50%,
-    #5f1212 100%
-  );
+  --gradient-blue-fade: linear-gradient(90deg,
+      #1d44b3 23%,
+      rgba(32, 68, 179, 0.07) 88%,
+      rgba(33, 68, 179, 0) 94%);
+  --gradient-purple-fade: linear-gradient(90deg,
+      #673ab7 0%,
+      rgba(103, 58, 183, 0) 94%);
+  --gradient-nav-red: linear-gradient(90deg,
+      #5f1212 0%,
+      #c52525 50%,
+      #5f1212 100%);
   --gradient-magic-purple: linear-gradient(90deg, #7a41dc 13%, #5b2ab5 100%);
-  --gradient-white-shine: linear-gradient(
-    90deg,
-    #d4d2d2 0%,
-    #ffffff 50%,
-    #d4d2d2 100%
-  );
+  --gradient-white-shine: linear-gradient(90deg,
+      #d4d2d2 0%,
+      #ffffff 50%,
+      #d4d2d2 100%);
 
   /* ================================
      🔤 TEXT SYSTEM
@@ -200,13 +192,11 @@ body {
   font-size: var(--fs-base);
   color: var(--text-main);
   background:
-    radial-gradient(
-      circle at 30% 50%,
+    radial-gradient(circle at 30% 50%,
       #f7eabf 0%,
       #f4eade 40%,
       #ead3bd 70%,
-      #f4e4b1 100%
-    );
+      #f4e4b1 100%);
   filter: brightness(1.1);
   line-height: var(--lh-normal);
   overflow-x: hidden;
@@ -257,7 +247,8 @@ img {
   display: block;
 }
 
-.sub-title {
+.sub-title,
+.subTitle {
   text-align: center;
   color: var(--color-primary);
   font-size: var(--fs-2xl);
@@ -380,43 +371,44 @@ p {
 }
 
 /* Primary Button */
-.btn-primary {
-  background: linear-gradient(
-    135deg,
-    var(--color-primary),
-    var(--color-primary-dark)
-  );
+.btn-primary,
+.btnPrimary {
+  background: linear-gradient(135deg,
+      var(--color-primary),
+      var(--color-primary-dark));
   color: var(--color-white);
   border-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 15px rgba(197, 37, 37, 0.3);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btnPrimary:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(197, 37, 37, 0.5);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Secondary Button */
-.btn-secondary {
-  background: linear-gradient(
-    135deg,
-    var(--color-secondary),
-    var(--color-secondary-dark)
-  );
+.btn-secondary,
+.btnSecondary {
+  background: linear-gradient(135deg,
+      var(--color-secondary),
+      var(--color-secondary-dark));
   color: var(--color-white);
   border-color: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 15px rgba(0, 0, 91, 0.3);
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btnSecondary:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 91, 0.5);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Outline Button */
-.btn-outline {
+.btn-outline,
+.btnOutline {
   background: transparent;
   color: var(--color-primary);
   /* Use primary color for text */
@@ -424,7 +416,8 @@ p {
   box-shadow: none;
 }
 
-.btn-outline:hover {
+.btn-outline:hover,
+.btnOutline:hover {
   background: var(--color-primary);
   color: var(--color-white);
   box-shadow: 0 4px 15px rgba(197, 37, 37, 0.3);
@@ -432,13 +425,15 @@ p {
 }
 
 /* Soft Button */
-.btn-soft {
+.btn-soft,
+.btnSoft {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-main);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.btn-soft:hover {
+.btn-soft:hover,
+.btnSoft:hover {
   background: rgba(255, 255, 255, 0.2);
   color: var(--color-primary);
   transform: translateY(-2px);
@@ -447,7 +442,8 @@ p {
 /* ===============================================================================
    🃏 CARDS
    =============================================================================== */
-.cards-grid {
+.cards-grid,
+.cardsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--space-6);
@@ -515,7 +511,8 @@ p {
   }
 }
 
-.card-header {
+.card-header,
+.cardHeader {
   background: var(--card-header-bg);
   padding: var(--space-4);
   margin: calc(var(--card-padding) * -1);
@@ -527,27 +524,33 @@ p {
    📐 UTILITY CLASSES
    =============================================================================== */
 
-.text-primary {
+.text-primary,
+.textPrimary {
   color: var(--color-primary);
 }
 
-.text-secondary {
+.text-secondary,
+.textSecondary {
   color: var(--color-secondary);
 }
 
-.text-muted {
+.text-muted,
+.textMuted {
   color: var(--text-muted);
 }
 
-.bg-primary {
+.bg-primary,
+.bgPrimary {
   background-color: var(--color-primary);
 }
 
-.bg-secondary {
+.bg-secondary,
+.bgSecondary {
   background-color: var(--color-secondary);
 }
 
-.bg-section {
+.bg-section,
+.bgSection {
   background-color: var(--section-bg);
 }
 
@@ -555,7 +558,8 @@ ul {
   list-style: none;
 }
 
-.section-title {
+.section-title,
+.sectionTitle {
   font-size: var(--fs-3xl);
   text-align: center;
   margin-bottom: var(--space-6);
@@ -571,17 +575,15 @@ hr {
   width: 60%;
   max-width: 600px;
   height: 30px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--color-primary) 15%,
-    var(--color-primary) 35%,
-    transparent 45%,
-    transparent 55%,
-    var(--color-primary) 65%,
-    var(--color-primary) 85%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      transparent 0%,
+      var(--color-primary) 15%,
+      var(--color-primary) 35%,
+      transparent 45%,
+      transparent 55%,
+      var(--color-primary) 65%,
+      var(--color-primary) 85%,
+      transparent 100%);
   background-size: 100% 1px;
   background-repeat: no-repeat;
   background-position: center;
@@ -624,7 +626,8 @@ hr::after {
 /* ===============================================================================
    💠 DECORATIVE SEPARATOR (.section-divider) - Mapping to same style
    =============================================================================== */
-.section-divider {
+.section-divider,
+.sectionDivider {
   /* Use the same logic, or just compose it. 
        Since this is a DIV, we can just put an HR inside it? 
        Or style it identically.
@@ -635,24 +638,23 @@ hr::after {
   max-width: 600px;
   height: 30px;
   position: relative;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    var(--color-primary) 15%,
-    var(--color-primary) 35%,
-    transparent 45%,
-    transparent 55%,
-    var(--color-primary) 65%,
-    var(--color-primary) 85%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      transparent 0%,
+      var(--color-primary) 15%,
+      var(--color-primary) 35%,
+      transparent 45%,
+      transparent 55%,
+      var(--color-primary) 65%,
+      var(--color-primary) 85%,
+      transparent 100%);
   background-size: 100% 1px;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.9;
 }
 
-.section-divider::before {
+.section-divider::before,
+.sectionDivider::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -666,7 +668,8 @@ hr::after {
   z-index: 2;
 }
 
-.section-divider::after {
+.section-divider::after,
+.sectionDivider::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -681,40 +684,44 @@ hr::after {
 }
 
 /* Hide the old inner icon if present in HTML */
-.section-divider .section-divider-icon {
+.section-divider .section-divider-icon,
+.sectionDivider .sectionDividerIcon {
   display: none;
 }
 
 /* ===============================================================================
    Scroll Top Button
    =============================================================================== */
-.scroll-top-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 100;
+.scroll-top-btn,
+.scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
 }
 
-.scroll-top-btn.show {
-    opacity: 1;
-    visibility: visible;
+.scroll-top-btn.show,
+.scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
 }
 
-.scroll-top-btn:hover {
-    background-color: var(--color-primary-dark);
-    transform: translateY(-5px);
+.scroll-top-btn:hover,
+.scrollTopBtn:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-5px);
 }
