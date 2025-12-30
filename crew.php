@@ -14,12 +14,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body >
 
     <section class="sectionBlock container">
         <h1 class="mainTitle" data-aos="zoom-in">President</h1>
         <hr>
-
+         <div class="section-divider"></div>
         <div class="presidentGrid">
             <div class="flipCard" data-aos="fade-right">
                 <div class="flipInner">
