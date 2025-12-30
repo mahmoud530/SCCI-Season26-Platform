@@ -7,15 +7,16 @@
     <title>Board Page</title>
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/crew.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
     <section class="sectionBlock container">
-        <h1 class="mainTitle">President</h1>
+        <h1 class="mainTitle" data-aos="zoom-in">President</h1>
 
         <div class="presidentGrid">
-            <div class="flipCard">
+            <div class="flipCard" data-aos="fade-right">
                 <div class="flipInner">
                     <div class="flipSide flipFront">
                         <img src="./assets/img/backCardCrew.png" alt="President" />
@@ -26,7 +27,7 @@
                 </div>
             </div>
 
-            <div class="paperScroll">
+            <div class="paperScroll" data-aos="fade-left">
                 <div class="paperContent">
                     <h3 class="paperTitle">Job Description</h3>
                     <p class=" text-primary">
@@ -43,11 +44,11 @@
     </section>
 
     <section class="sectionBlock container">
-        <h2 class="sectionTitle">High Board</h2>
+        <h2 class="section-title text-primary" data-aos="fade-up">High Board</h2>
 
-        <div class="cardsGrid">
+        <div class="cards-grid">
 
-            <div class="boardItem">
+            <div class="boardItem" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="roleTitle">Technical</h3>
                 <div class="flipCard">
                     <span class="sideLabel left">IT DD</span>
@@ -60,10 +61,10 @@
                         </div>
                     </div>
                 </div>
-                <img src="./assets/img/searchIcon.png" class="smallIcon" alt="" style="display:none;">
+                <a href="#" class="btn btn-primary btn-sm">Discover More</a>
             </div>
 
-            <div class="boardItem">
+            <div class="boardItem" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="roleTitle">Academic Committee</h3>
                 <div class="flipCard">
                     <div class="flipInner">
@@ -75,10 +76,10 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn btn-outline btn-sm">Discover More</a>
+                <a href="#" class="btn btn-primary btn-sm">Discover More</a>
             </div>
 
-            <div class="boardItem">
+            <div class="boardItem" data-aos="fade-up" data-aos-delay="300">
                 <h3 class="roleTitle">Human Resource</h3>
                 <div class="flipCard">
                     <div class="flipInner">
@@ -93,7 +94,7 @@
                 <a href="#" class="btn btn-primary btn-sm">Know Us !</a>
             </div>
 
-            <div class="boardItem">
+            <div class="boardItem" data-aos="fade-up" data-aos-delay="400">
                 <h3 class="roleTitle">External Relations</h3>
                 <div class="flipCard">
                     <span class="sideLabel right">BD L</span>
@@ -113,6 +114,7 @@
         </div>
     </section>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 

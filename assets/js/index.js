@@ -5,3 +5,9 @@ flipCards.forEach(card => {
     card.classList.toggle("isFlipped");
   });
 });
+
+// Initialize AOS
+AOS.init({
+  duration: 1000,
+  once: true,
+});
