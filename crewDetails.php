@@ -7,6 +7,11 @@
     <title>crewDetails</title>
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/crewDetails.css" />
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -23,7 +28,7 @@
 
         <div class="headLayout">
             
-            <div class="flipCard headCard" data-aos="fade-right">
+            <div class="flipCard headCard smCard" data-aos="fade-right">
                 <div class="flipInner">
                     <div class="flipSide flipFront">
                         <img src="./assets/img/backCardCrew.png" loading="lazy" alt="Head" />
@@ -60,7 +65,7 @@
             <div class="sectionDivider"></div>
         </div>
 
-        <div class="membersGrid">
+        <div class="membersGrid smCard">
             
             <?php
             // Generate dummy members for demonstration
@@ -79,7 +84,7 @@
                 $delay = ($i % 4) * 150; // Stagger per row (assuming 3-4 cols)
                 
                 echo '
-                <div class="flipCard memberCard" data-aos="fade-up" data-aos-delay="' . $delay . '">
+                <div class="flipCard memberCard smCard" data-aos="fade-up" data-aos-delay="' . $delay . '">
                     <div class="flipInner">
                         <div class="flipSide flipFront">
                             <img src="./assets/img/backCardCrew.png" loading="lazy" />
