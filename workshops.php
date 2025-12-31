@@ -71,7 +71,7 @@
                     <div class="cardsContainer" data-aos="flip">
                         <div class="flipCard card2">
                             <div class="frontCard">
-                                <img src="assets/img/backCardWorkshops.png" alt="TechSolve Workshop" loading="lazy">
+                                <img src="assets/img/backCardCrew.png" alt="TechSolve Workshop" loading="lazy">
                             </div>
                             <div class="backCard">
                                 <img src="assets/img/marketiveCard.png" alt="techSolveCard" loading="lazy">
@@ -88,7 +88,7 @@
                     <div class="cardsContainer" data-aos="flip">
                         <div class="flipCard card3">
                             <div class="frontCard">
-                                <img src="assets/img/backCardWorkshops.png" alt="TechSolve Workshop" loading="lazy">
+                                <img src="assets/img/backCardCrew.png" alt="TechSolve Workshop" loading="lazy">
                             </div>
                             <div class="backCard">
                                 <img src="assets/img/dataAnalysisCard.png" alt="techSolveCard" loading="lazy">
@@ -105,7 +105,7 @@
                     <div class="cardsContainer" data-aos="flip">
                         <div class="flipCard card4">
                             <div class="frontCard">
-                                <img src="assets/img/backCardWorkshops.png" alt="TechSolve Workshop" loading="lazy">
+                                <img src="assets/img/backCardCrew.png" alt="TechSolve Workshop" loading="lazy">
                             </div>
                             <div class="backCard">
                                 <img src="assets/img/devolgyCard.png" alt="techSolveCard" loading="lazy">
