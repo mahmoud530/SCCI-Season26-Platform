@@ -38,6 +38,10 @@
             <div class="magicDivider">
                  <h2 class="heroTitle">devolgy</h2>
             </div>
+            
+            <a href="workshops.php" class="backBtn">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
 
             <div class="workshopDescription">
                 <div>
@@ -52,6 +56,53 @@
 
             </div>
 
+        </section>
+
+        <!-- Workshop Journey Section -->
+        <section class="workshopJourneySection">
+            <div class="container">
+                <h2 class="heroTitle">The Devology <span>Spell Journey</span></h2>
+                
+                <div class="journeyContainer">
+                    <!-- Navigation Buttons (Left Side) -->
+                    <div class="journeyNav">
+                        <button class="journeyBtn active" data-content="opening">Opening Spell</button>
+                        <button class="journeyBtn" data-content="core1">Core Magic</button>
+                        <button class="journeyBtn" data-content="core2">Advanced Spells</button>
+                        <button class="journeyBtn" data-content="core3">Final Quest</button>
+                    </div>
+                    
+                    <!-- Paper Content Display (Right Side) -->
+                    <div class="journeyPaper">
+                        <img src="assets/img/paperWorkshop.png" alt="Workshop Paper" class="paperBg">
+                        <div class="paperContent">
+                            <!-- Opening Spell Content (Default) -->
+                            <div class="contentBlock active" id="opening">
+                                <h3>Opening Spell</h3>
+                                <p>In this phase, participants are introduced to the world of web development and learn the web actually works. They learn the role of browsers, servers, and code, and begin casting their first basic spells using HTML. This is where curiosity turns into creation.</p>
+                            </div>
+                            
+                            <!-- Core Magic Content -->
+                            <div class="contentBlock" id="core1">
+                                <h3>Core Magic</h3>
+                                <p>Participants dive deeper into CSS styling and JavaScript interactivity. They learn to create responsive designs and add dynamic behaviors to their web pages.</p>
+                            </div>
+                            
+                            <!-- Advanced Spells Content -->
+                            <div class="contentBlock" id="core2">
+                                <h3>Advanced Spells</h3>
+                                <p>Master advanced techniques including animations, API integration, and modern frameworks. Transform simple pages into powerful web applications.</p>
+                            </div>
+                            
+                            <!-- Final Quest Content -->
+                            <div class="contentBlock" id="core3">
+                                <h3>Final Quest</h3>
+                                <p>Apply all learned skills to build a complete project. Showcase your magical web development abilities in a final artifact.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
