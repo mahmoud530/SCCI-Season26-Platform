@@ -88,6 +88,7 @@
 
 .cardsContainer {
     transition: all 0.3s ease;
+    perspective: 1000px;
 }
 
 .cardsContainer:hover {
@@ -128,15 +129,15 @@
 
 /*  animation apply  */
 [data-aos].aos-animate .flipCard {
-    animation: flip 1s ease-in-out forwards;
+    animation: flip 1.2s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
 }
 
 @keyframes flip {
-    from {
+    0% {
         transform: rotateY(0deg);
     }
 
-    to {
+    100% {
         transform: rotateY(180deg);
     }
 }
@@ -171,7 +172,7 @@
     transform: translateX(-50%);
     width: 80%;
     text-align: center;
-    opacity:1;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 
@@ -206,5 +207,3 @@
     background-color: var(--color-primary-dark);
     transform: translateY(-5px);
 }
-
-
