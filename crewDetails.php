@@ -16,6 +16,14 @@
 
 <body>
 
+    <!-- Back Button -->
+    <a href="crew.php" class="backButton" aria-label="Go back to crew page">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        <span>Back</span>
+    </a>
+
     <section class="sectionBlock container">
         
         <div class="titleWrapper" data-aos="fade-down">
@@ -28,7 +36,7 @@
 
         <div class="headLayout">
             
-            <div class="flipCard headCard smCard" data-aos="fade-right">
+            <div class="flipCard headCard smCard" data-aos="flip">
                 <div class="flipInner">
                     <div class="flipSide flipFront">
                         <img src="./assets/img/backCardCrew.png" loading="lazy" alt="Head" />
@@ -65,37 +73,107 @@
             <div class="sectionDivider"></div>
         </div>
 
-        <div class="membersGrid smCard">
+        <div class="membersGrid">
             
-            <?php
-            // Generate dummy members for demonstration
-            // In a real app, this would come from a database or array
-            $memberCount = 9;
-            $baseDelay = 100;
-            
-            for ($i = 0; $i < $memberCount; $i++) {
-                // Stagger delay: increase by 100ms for each card
-                $delay = $baseDelay + ($i * 100);
-                
-                // Reset delay if it gets too long (optional, purely for UX preference)
-                // if ($i % 3 == 0) $delay = $baseDelay; 
-                // But user asked for one after another, so continuous increment is better or per-row.
-                // To keep it simple and nice:
-                $delay = ($i % 4) * 150; // Stagger per row (assuming 3-4 cols)
-                
-                echo '
-                <div class="flipCard memberCard smCard" data-aos="fade-up" data-aos-delay="' . $delay . '">
-                    <div class="flipInner">
-                        <div class="flipSide flipFront">
-                            <img src="./assets/img/backCardCrew.png" loading="lazy" />
-                        </div>
-                        <div class="flipSide flipBack">
-                            <img src="./assets/img/crewFrontCard.png" loading="lazy" />
-                        </div>
+            <div class="flipCard memberCard smCard card1" data-aos="flip">
+                <div class="flipInner">
+                    <div class="flipSide flipFront">
+                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
                     </div>
-                </div>';
-            }
-            ?>
+                    <div class="flipSide flipBack">
+                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flipCard memberCard smCard card2" data-aos="flip">
+                <div class="flipInner">
+                    <div class="flipSide flipFront">
+                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
+                    </div>
+                    <div class="flipSide flipBack">
+                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flipCard memberCard smCard card3" data-aos="flip">
+                <div class="flipInner">
+                    <div class="flipSide flipFront">
+                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
+                    </div>
+                    <div class="flipSide flipBack">
+                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flipCard memberCard smCard card4" data-aos="flip">
+                <div class="flipInner">
+                    <div class="flipSide flipFront">
+                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
+                    </div>
+                    <div class="flipSide flipBack">
+                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flipCard memberCard smCard card1" data-aos="flip">
+                <div class="flipInner">
+                    <div class="flipSide flipFront">
+                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
+                    </div>
+                    <div class="flipSide flipBack">
+                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flipCard memberCard smCard card2" data-aos="flip">
+                <div class="flipInner">
+                    <div class="flipSide flipFront">
+                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
+                    </div>
+                    <div class="flipSide flipBack">
+                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flipCard memberCard smCard card3" data-aos="flip">
+                <div class="flipInner">
+                    <div class="flipSide flipFront">
+                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
+                    </div>
+                    <div class="flipSide flipBack">
+                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flipCard memberCard smCard card4" data-aos="flip">
+                <div class="flipInner">
+                    <div class="flipSide flipFront">
+                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
+                    </div>
+                    <div class="flipSide flipBack">
+                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flipCard memberCard smCard card1" data-aos="flip">
+                <div class="flipInner">
+                    <div class="flipSide flipFront">
+                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
+                    </div>
+                    <div class="flipSide flipBack">
+                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 

@@ -1,8 +1,10 @@
-const flipCards = document.querySelectorAll(".flipCard");
+document.addEventListener("DOMContentLoaded", () => {
+  const flipCards = document.querySelectorAll(".flipCard");
 
-flipCards.forEach(card => {
-  card.addEventListener("mouseenter", () => {
-    card.classList.toggle("isFlipped");
+  flipCards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      card.classList.toggle("isFlipped");
+    });
   });
 });
 
@@ -32,6 +34,17 @@ function openModal(element) {
   modalContent.appendChild(title);
   modalContent.appendChild(mainCard);
   modalContent.appendChild(subGrid);
+
+  // Re-attach Flip Event Listeners for Cloned Cards
+  const modalFlipCards = modalContent.querySelectorAll(".flipCard");
+  modalFlipCards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+      card.classList.add("isFlipped");
+    });
+    card.addEventListener("mouseleave", () => {
+      card.classList.remove("isFlipped");
+    });
+  });
 
   // Activate
   overlay.classList.add("active");

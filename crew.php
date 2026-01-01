@@ -20,7 +20,7 @@
         <h1 class="mainTitle" data-aos="zoom-in">President</h1>
         <hr>
         <div class="presidentGrid">
-            <div class="flipCard" data-aos="fade-right">
+            <div class="flipCard " data-aos="flip">
                 <div class="flipInner">
                     <div class="flipSide flipFront">
                         <img src="./assets/img/backCardCrew.png" loading="lazy" alt="President" />
@@ -29,9 +29,9 @@
                         <img src="./assets/img/crewFrontCard.png" loading="lazy" alt="Details" />
                     </div>
                 </div>
-            </div>
+            </div >
 
-            <div class="paperScroll" data-aos="fade-left">
+            <div class="paperScroll js-auto-flip" data-aos="fade-left">
                 <div class="paperContent">
                     <h3 class="paperTitle">Job Description</h3>
                     <p class=" textPrimary">
@@ -53,13 +53,13 @@
 
         <div class="cardsGrid">
 
-            <div class="boardItem" data-aos="fade-up" data-aos-delay="400" onclick="openModal(this)">
+            <div class="boardItem js-auto-flip" data-aos="fade-up" data-aos-delay="400" onclick="openModal(this)">
                 <h3 class="roleTitle" style="cursor: pointer;">Technical</h3>
-                <div class="flipCard">
+                <div class="flipCard  " data-aos="flip">
                     <span class="sideLabel left">IT DD</span>
                     <span class="sideLabel right purpleText">MP SMM</span>
-                    <div class="flipInner">
-                        <div class="flipSide flipFront">
+                    <div class="flipInner  ">
+                        <div class="flipSide  flipFront">
                             <img src="./assets/img/backCardCrew.png" loading="lazy">
                         </div>
                         <div class="flipSide flipBack">
@@ -67,60 +67,60 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn btnPrimary btnSm">Discover More</a>
+                <a href="" class="btn btnPrimary btnSm">Discover More</a>
 
                 <!-- Sub Cards Container -->
                 <div class="subCrewGrid hiddenGrid">
                     <!-- 1. IT -->
                     <div class="subCard">
                        <span class="subRoleTitle">IT</span>
-                       <span class="headName">Name</span>
-                       <div class="flipCard smCard">
+                       <div class="flipCard smCard card1" data-aos="flip">
                            <div class="flipInner">
                                <div class="flipSide flipFront"><img src="./assets/img/backCardCrew.png" loading="lazy"></div>
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
                        </div>
+                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 2. DD -->
                     <div class="subCard">
                        <span class="subRoleTitle">DD</span>
-                       <span class="headName">Name</span>
-                       <div class="flipCard smCard">
+                       <div class="flipCard smCard card2" data-aos="flip">
                            <div class="flipInner">
                                <div class="flipSide flipFront"><img src="./assets/img/backCardCrew.png" loading="lazy"></div>
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
                        </div>
+                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 3. MP -->
                     <div class="subCard">
                        <span class="subRoleTitle">MP</span>
-                       <span class="headName">Name</span>
-                       <div class="flipCard smCard">
+                       <div class="flipCard smCard card3" data-aos="flip">
                            <div class="flipInner">
                                <div class="flipSide flipFront"><img src="./assets/img/backCardCrew.png" loading="lazy"></div>
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
-                       </div>
+                       </div>   
+                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 4. SMM -->
                     <div class="subCard">
                        <span class="subRoleTitle">SMM</span>
-                       <span class="headName">Name</span>
-                       <div class="flipCard smCard">
+                       <div class="flipCard smCard card4" data-aos="flip">
                            <div class="flipInner">
                                <div class="flipSide flipFront"><img src="./assets/img/backCardCrew.png" loading="lazy"></div>
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
-                       </div>
+                       </div>   
+                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                 </div>
             </div>
 
             <div class="boardItem" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="roleTitle">Academic Committee</h3>
-                <div class="flipCard">
+                <div class="flipCard" data-aos="flip">
                     <div class="flipInner">
                         <div class="flipSide flipFront">
                             <img src="./assets/img/backCardCrew.png" alt="Academic" />
@@ -130,12 +130,12 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn btnPrimary btnSm">Know Us !</a>
+                <a href="crewDetails.php" class="btn btnPrimary btnSm">Know Us !</a>
             </div>
 
             <div class="boardItem" data-aos="fade-up" data-aos-delay="300">
                 <h3 class="roleTitle">Human Resource</h3>
-                <div class="flipCard">
+                <div class="flipCard" data-aos="flip">
                     <div class="flipInner">
                         <div class="flipSide flipFront">
                             <img src="./assets/img/backCardCrew.png" alt="HR" />
@@ -145,11 +145,11 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn btnPrimary btnSm">Know Us !</a>
+                <a href="crewDetails.php" class="btn btnPrimary btnSm">Know Us !</a>
             </div>
             <div class="boardItem" data-aos="fade-up" data-aos-delay="400" onclick="openModal(this)">
                 <h3 class="roleTitle" style="cursor: pointer;">External Relations</h3>
-                <div class="flipCard">
+                <div class="flipCard" data-aos="flip">
                     <span class="sideLabel left">BD L</span>
                     <span class="sideLabel right purpleText">CR PR</span>
                     <div class="flipInner">
@@ -161,53 +161,53 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="btn btnPrimary btnSm">Discover More</a>
+                <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
 
                 <!-- Sub Cards Container -->
                 <div class="subCrewGrid hiddenGrid">
                     <!-- 1. BD -->
                     <div class="subCard">
                        <span class="subRoleTitle">BD</span>
-                       <span class="headName">Name</span>
-                       <div class="flipCard smCard">
+                       <div class="flipCard smCard card1" data-aos="flip">
                            <div class="flipInner">
                                <div class="flipSide flipFront"><img src="./assets/img/backCardCrew.png" loading="lazy"></div>
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
-                       </div>
+                       </div>   
+                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 2. L -->
                     <div class="subCard">
                        <span class="subRoleTitle">L</span>
-                       <span class="headName">Name</span>
-                       <div class="flipCard smCard">
+                       <div class="flipCard smCard card2" data-aos="flip">
                            <div class="flipInner">
                                <div class="flipSide flipFront"><img src="./assets/img/backCardCrew.png" loading="lazy"></div>
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
-                       </div>
+                       </div>   
+                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 3. CR -->
                     <div class="subCard">
                        <span class="subRoleTitle">CR</span>
-                       <span class="headName">Name</span>
-                       <div class="flipCard smCard">
+                       <div class="flipCard smCard card3" data-aos="flip">
                            <div class="flipInner">
                                <div class="flipSide flipFront"><img src="./assets/img/backCardCrew.png" loading="lazy"></div>
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
-                       </div>
+                       </div>   
+                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 4. PR -->
                     <div class="subCard">
                        <span class="subRoleTitle">PR</span>
-                       <span class="headName">Name</span>
-                       <div class="flipCard smCard">
+                       <div class="flipCard smCard card4" data-aos="flip">
                            <div class="flipInner">
                                <div class="flipSide flipFront"><img src="./assets/img/backCardCrew.png" loading="lazy"></div>
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
-                       </div>
+                       </div>   
+                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                 </div>
             </div>
@@ -224,6 +224,7 @@
 
     <!-- Modal Container -->
     <div id="crewModal" class="crewModal">
+        <button class="modalCloseBtn" onclick="closeModal()" aria-label="Close Modal">×</button>
         <div class="modalContent">
             <!-- Content will be injected via JS -->
         </div>

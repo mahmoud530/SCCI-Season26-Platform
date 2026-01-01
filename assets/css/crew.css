@@ -124,6 +124,21 @@
   transform: rotateY(180deg);
 }
 
+/* Hover State - Flips back to show the decorative back */
+.flipCard:hover .flipInner {
+  transform: rotateY(0deg);
+  animation: none;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  /* Smooth 3D flip effect */
+}
+
+/* Keep animation running during auto-flip */
+.flipCard[data-aos="flip"].aos-animate .flipInner {
+  animation: flip 1s ease-in-out forwards !important;
+  transition: none !important;
+  /* Disable transition during animation */
+}
+
 .flipSide {
   position: absolute;
   width: 100%;
@@ -217,13 +232,22 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  width: 95%;
-  max-width: 800px;
-  /* Significantly increased from 500px */
+  width: 100%;
+  /* Full width */
+  max-width: 100%;
+  /* Remove width limit */
+  max-height: 100vh;
+  /* Full height */
+  overflow: hidden;
+  /* Hide scrollbar */
+  padding: var(--space-6) var(--space-8);
+  /* Increased horizontal padding */
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  /* Center content vertically */
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -231,11 +255,44 @@
 
 .crew-modal.active,
 .crewModal.active {
-  width: 100%;
-  max-width: 100vh;
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1);
+}
+
+/* ===== Modal Close Button ===== */
+.modalCloseBtn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border: 2px solid var(--color-accent);
+  color: var(--color-white);
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(168, 129, 212, 0.4);
+  font-family: Arial, sans-serif;
+  line-height: 1;
+  padding: 0;
+}
+
+.modalCloseBtn:hover {
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 6px 25px rgba(168, 129, 212, 0.6);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+}
+
+.modalCloseBtn:active {
+  transform: rotate(90deg) scale(0.95);
 }
 
 /* Modal Content Styling */
@@ -243,9 +300,10 @@
 .crewModal .roleTitle {
   color: var(--color-white);
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  margin-bottom: var(--space-4);
-  font-size: var(--fs-3xl);
-  /* Larger title */
+  margin-bottom: var(--space-2);
+  /* Reduced margin */
+  font-size: var(--fs-2xl);
+  /* Smaller title */
 }
 
 /* Main Card in Modal - Flip Enabled */
@@ -254,9 +312,14 @@
   pointer-events: auto;
   /* Re-enable flipping */
   cursor: pointer;
-  margin-bottom: var(--space-4);
-  transform: scale(1.1);
-  /* Slightly larger main card */
+  margin-bottom: 0;
+  /* No margin */
+  max-width: 250px;
+  /* Direct size constraint */
+  max-height: 350px;
+  /* Direct height constraint */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Enable Flip for Sub-cards (Team) */
@@ -264,8 +327,7 @@
 .crewModal .subCrewGrid .flipCard {
   pointer-events: auto;
   /* Allow flipping */
-  transform: none;
-  /* Reset scale if inherited */
+  /* transform: none; Removed as per request */
   cursor: pointer;
 }
 
@@ -273,16 +335,17 @@
 .crew-modal .sub-crew-grid,
 .crewModal .subCrewGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 cards in one row */
   gap: var(--space-4);
-
-  /* Increased gap */
+  /* Reduced gap for better fit */
   width: 100%;
-  max-height: 700px;
-  /* Expanded */
+  max-width: 850px;
+  /* Limit width */
   opacity: 1;
   transform: translateY(0);
-  margin-top: var(--space-3);
+  margin-top: 0;
+  /* Remove top margin */
   pointer-events: auto;
   /* Enable clicking sub-cards */
 }
@@ -341,7 +404,7 @@
   width: 100%;
   /* Fill column */
   max-width: 130px;
-  /* Increased from 90px */
+  /* Smaller for compact layout */
   aspect-ratio: 2/3.2;
   cursor: pointer;
   transition: transform 0.2s;
@@ -350,4 +413,52 @@
 .sm-card:hover,
 .smCard:hover {
   transform: translateY(-5px);
+}
+
+/* ===============================================================================
+   🔄 AUTO FLIP ANIMATION
+   =============================================================================== */
+
+@keyframes flip {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+/* 
+   Ensure animation overrides transition 
+   Target .flipInner specifically as it holds the transform 
+*/
+[data-aos="flip"].aos-animate .flipInner,
+.flipCard[data-aos="flip"].aos-animate .flipInner,
+.crewModal.active .flipCard .flipInner {
+  animation: flip 1s ease-in-out forwards !important;
+  transition: none !important;
+  /* Disable hover transition during anim */
+  transform-style: preserve-3d;
+}
+
+/* Staggered Delays */
+[data-aos="flip"].aos-animate.card1 .flipInner,
+.flipCard.card1[data-aos="flip"].aos-animate .flipInner {
+  animation-delay: 0.3s !important;
+}
+
+[data-aos="flip"].aos-animate.card2 .flipInner,
+.flipCard.card2[data-aos="flip"].aos-animate .flipInner {
+  animation-delay: 0.6s !important;
+}
+
+[data-aos="flip"].aos-animate.card3 .flipInner,
+.flipCard.card3[data-aos="flip"].aos-animate .flipInner {
+  animation-delay: 0.9s !important;
+}
+
+[data-aos="flip"].aos-animate.card4 .flipInner,
+.flipCard.card4[data-aos="flip"].aos-animate .flipInner {
+  animation-delay: 1.2s !important;
 }
