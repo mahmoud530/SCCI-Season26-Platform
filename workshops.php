@@ -55,10 +55,10 @@
                     <div class="cardsContainer" data-aos="flip">
                         <div class="flipCard card1">
                             <div class="frontCard">
-                                <img src="assets/img/backCardCrew.png" alt="TechSolve Workshop" loading="lazy">
+                                <img src="assets/img/backCardCrew.jpg" alt="TechSolve Workshop" loading="lazy">
                             </div>
                             <div class="backCard">
-                                <img src="assets/img/techSolveCard.png" alt="techSolveCard" loading="lazy">
+                                <img src="assets/img/techSolveCard.jpg" alt="techSolve Workshop" loading="lazy">
                                 <div class="cardContent">
                                     <a href="workshopsDetails.php" class="btn btn-primary btn-sm">Explore More</a>
                                 </div>
@@ -71,10 +71,10 @@
                     <div class="cardsContainer" data-aos="flip">
                         <div class="flipCard card2">
                             <div class="frontCard">
-                                <img src="assets/img/backCardCrew.png" alt="TechSolve Workshop" loading="lazy">
+                                <img src="assets/img/backCardCrew.jpg" alt="marketive Workshop" loading="lazy">
                             </div>
                             <div class="backCard">
-                                <img src="assets/img/marketiveCard.png" alt="techSolveCard" loading="lazy">
+                                <img src="assets/img/marketiveCard.jpg" alt="marketive Workshop" loading="lazy">
                                 <div class="cardContent">
                                     <a href="workshopsDetails.php" class="btn btn-primary btn-sm">Explore More</a>
                                 </div>
@@ -88,10 +88,10 @@
                     <div class="cardsContainer" data-aos="flip">
                         <div class="flipCard card3">
                             <div class="frontCard">
-                                <img src="assets/img/backCardCrew.png" alt="TechSolve Workshop" loading="lazy">
+                                <img src="assets/img/backCardCrew.jpg" alt="dataAnalysis Workshop" loading="lazy">
                             </div>
                             <div class="backCard">
-                                <img src="assets/img/dataAnalysisCard.png" alt="techSolveCard" loading="lazy">
+                                <img src="assets/img/dataAnalysisCard.jpg" alt="dataAnalysis Workshop" loading="lazy">
                                 <div class="cardContent">
                                     <a href="workshopsDetails.php" class="btn btn-primary btn-sm">Explore More</a>
                                 </div>
@@ -105,10 +105,10 @@
                     <div class="cardsContainer" data-aos="flip">
                         <div class="flipCard card4">
                             <div class="frontCard">
-                                <img src="assets/img/backCardCrew.png" alt="TechSolve Workshop" loading="lazy">
+                                <img src="assets/img/backCardCrew.jpg" alt="devolgy Workshop" loading="lazy">
                             </div>
                             <div class="backCard">
-                                <img src="assets/img/devolgyCard.png" alt="techSolveCard" loading="lazy">
+                                <img src="assets/img/devolgyCard.jpg" alt="devolgy Workshop" loading="lazy">
                                 <div class="cardContent">
                                     <a href="workshopsDetails.php" class="btn btn-primary btn-sm">Explore More</a>
                                 </div>
