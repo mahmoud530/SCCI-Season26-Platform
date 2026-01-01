@@ -36,32 +36,7 @@
     letter-spacing: 2px;
 }
 
-/* Workshops Grid Section */
-.workshopsSection {
-    padding: var(--space-8) 0;
-    background-size: cover;
-    background-attachment: fixed;
-}
 
-.workshopCardsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: var(--space-8);
-    justify-items: center;
-}
-
-
-/* Card Content Overlay (optional, if we want text on top of images) */
-.cardContent {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    text-align: center;
-    opacity:1;
-    transition: opacity 0.3s ease;
-}
 
 
 
@@ -90,40 +65,26 @@
     color: var(--color-secondary);
 }
 
-/* Scroll Top Button */
-.scrollTopBtn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--color-primary);
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 100;
-}
-
-.scrollTopBtn.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-.scrollTopBtn:hover {
-    background-color: var(--color-primary-dark);
-    transform: translateY(-5px);
-}
 
 
 /*  workshop cards  */
+
+.workshopsSection {
+    padding: var(--space-8) 0;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Workshops Grid Section */
+
+.workshopCardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--space-8);
+    justify-items: center;
+}
+
+
 
 .cardsContainer {
     transition: all 0.3s ease;
@@ -181,7 +142,7 @@
 }
 
 
-/*  make cards flips indevidual  */
+/*  animation delay  */
 [data-aos].aos-animate .card1 {
     animation: flip 1s ease-in-out forwards;
     animation-delay: 0.3s;
@@ -194,11 +155,56 @@
 
 [data-aos].aos-animate .card3 {
     animation: flip 1s ease-in-out forwards;
-    animation-delay: 0.9;
+    animation-delay: 0.9s;
 }
 
 [data-aos].aos-animate .card4 {
     animation: flip 1s ease-in-out forwards;
-    animation-delay: 1.0s;
+    animation-delay: 1.2s;
 }
+
+/* Explore Button */
+.cardContent {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    opacity:1;
+    transition: opacity 0.3s ease;
+}
+
+/* Scroll Top Button */
+.scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+}
+
+.scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scrollTopBtn:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-5px);
+}
+
 

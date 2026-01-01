@@ -1,0 +1,46 @@
+/* Workshop Description */
+.workshopDescription{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;   
+    gap: var(--space-10);
+    flex-wrap: wrap;
+}
+
+.workshopImage{
+    width: 400px;
+    height: auto;
+}
+
+.workshopDetails{
+    font-size: var(--fs-base);
+    color: var(--color-primary-dark);
+    font-family: 'Cinzel', serif;
+    width: 55%;
+    letter-spacing: 2px;
+}
+
+/* Member Cards */
+
+.MemberCardTitle{
+    text-align: center;
+    margin-bottom: var(--space-8);
+}
+
+.workshopDetailsGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-8);
+    justify-items: center;
+}
+
+/* animation delay */
+[data-aos].aos-animate .card5 {
+    animation: flip 1s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+[data-aos].aos-animate .card6 {
+    animation: flip 1s ease-in-out forwards;
+    animation-delay: 1.8s;
+}
