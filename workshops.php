@@ -46,26 +46,26 @@
     </header>
     <main>
         <!-- Workshops Grid -->
-        <section class="workshopsSection">
-            <div class="container">
-                <div class="workshopCardsGrid">
+           <section class="workshops-section">
+        <div class="container">
+            <div class="workshop-cards-grid">
+                <?php foreach ($result as $workshops) { ?>
 
-                 
+                    <!-- Workshop Card 1: TechSolve -->
+                    <div class="workshop-card" onclick="window.location.href='workshopsDetails.php?id=techsolve'">
+                        <img src="assets/img/<?php echo $workshops['workshop_image']; ?>"
+                            alt="<?php echo $workshops['workshop_name'] ?>" class="card-bg" loading="lazy">
 
-                    <div class="cardsContainer" data-aos="flip">
-                        <div class="flipCard card1">
-                            <div class="frontCard">
-                                <img src="assets/img/backCardCrew.jpg" alt="TechSolve Workshop" loading="lazy">
-                            </div>
-                            <div class="backCard">
-                                <img src="assets/img/techSolveCard.jpg" alt="techSolve Workshop" loading="lazy">
-                                <div class="cardContent">
-                                    <a href="workshopsDetails.php" class="btn btn-primary btn-sm">Explore More</a>
-                                </div>
-                            </div>
+                        <div class="card-content">
+                            <a href="workshopsDeatials.php?category_id=<?php echo $workshops['workshop_id'] ?>"
+                                class="btn btn-primary btn-sm">Explore More</a>
                         </div>
                     </div>
 
+                <?php } ?>
+            </div>
+        </div>
+    </section>
         <!-- Scroll To Top -->
         <div class="scrollTopBtn" id="scrollTopBtn">
             <i class="fa-solid fa-arrow-up"></i>
