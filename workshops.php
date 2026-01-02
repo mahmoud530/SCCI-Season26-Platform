@@ -50,7 +50,7 @@
             <div class="container">
                 <div class="workshopCardsGrid">
 
-                    <!--  techSolve card 1  -->
+                 
 
                     <div class="cardsContainer" data-aos="flip">
                         <div class="flipCard card1">
@@ -65,61 +65,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!--  marketive card 2  -->
-
-                    <div class="cardsContainer" data-aos="flip">
-                        <div class="flipCard card2">
-                            <div class="frontCard">
-                                <img src="assets/img/backCardCrew.jpg" alt="marketive Workshop" loading="lazy">
-                            </div>
-                            <div class="backCard">
-                                <img src="assets/img/marketiveCard.jpg" alt="marketive Workshop" loading="lazy">
-                                <div class="cardContent">
-                                    <a href="workshopsDetails.php" class="btn btn-primary btn-sm">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--  dataAnalysis card 3  -->
-
-                    <div class="cardsContainer" data-aos="flip">
-                        <div class="flipCard card3">
-                            <div class="frontCard">
-                                <img src="assets/img/backCardCrew.jpg" alt="dataAnalysis Workshop" loading="lazy">
-                            </div>
-                            <div class="backCard">
-                                <img src="assets/img/dataAnalysisCard.jpg" alt="dataAnalysis Workshop" loading="lazy">
-                                <div class="cardContent">
-                                    <a href="workshopsDetails.php" class="btn btn-primary btn-sm">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--  devolgy card 4  -->
-
-                    <div class="cardsContainer" data-aos="flip">
-                        <div class="flipCard card4">
-                            <div class="frontCard">
-                                <img src="assets/img/backCardCrew.jpg" alt="devolgy Workshop" loading="lazy">
-                            </div>
-                            <div class="backCard">
-                                <img src="assets/img/devolgyCard.jpg" alt="devolgy Workshop" loading="lazy">
-                                <div class="cardContent">
-                                    <a href="workshopsDetails.php" class="btn btn-primary btn-sm">Explore More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </section>
 
         <!-- Scroll To Top -->
         <div class="scrollTopBtn" id="scrollTopBtn">
