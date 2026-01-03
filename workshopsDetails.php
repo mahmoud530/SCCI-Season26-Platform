@@ -1,3 +1,18 @@
+<?php
+include('includes/config.php');
+if(isset($_GET['category_id'])) {
+    $workshop_id = $_GET['category_id'];
+    $select_workshop = "SELECT * FROM `workshops` WHERE `workshop_id` = '$workshop_id'";
+    $run_workshop = mysqli_query($connect, $select_workshop);
+
+$select_members="SELECT * FROM `users` WHERE `workshop_id` = '$workshop_id' && `status` = 1";
+$run_members = mysqli_query($connect, $select_members);
+
+
+$select_spill="SELECT * FROM `spells`  WHERE `workshop_id` = '$workshop_id'";
+$run_spill = mysqli_query($connect, $select_spill);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,15 +43,16 @@
 <body>
 
     <!-- Navigation -->
-    <?php include 'includes/nav.php'; ?>
+    <!-- <?php include 'includes/nav.php'; ?> -->
 
     <main>
 
         <!-- Description for workshop -->
+         <?php foreach ($run_workshop as $workshops) { ?>
         <section class="workshopsHero">
         
             <div class="magicDivider">
-                 <h2 class="heroTitle">devolgy</h2>
+                 <h2 class="heroTitle"><?php echo $workshops['workshop_name']; ?></h2>
             </div>
             
             <a href="workshops.php" class="backBtn">
@@ -45,17 +61,13 @@
 
             <div class="workshopDescription">
                 <div>
-                    <img class="workshopImage" src="assets/img/paperHome.png" alt="Devolgy Image" loading="lazy">
+                    <img class="workshopImage" src="assets/img/<?php echo $workshops['workshop_image']; ?>" alt="Devolgy Image" loading="lazy">
                 </div>
 
-                <p class="workshopDetails"> Devology – Web Development MagicDevology is where code transforms into real magic  In this section, 
-                    participants learn how to craft powerful web “spells” using modern web development tools to build interactive, 
-                    fast, and scalable websites.Here, every line of code has a purpose, 
-                    every bug is a curse to be broken, and every project is a magical artifact added to your skill set.
-                </p>
+                <p class="workshopDetails"><?php echo $workshops['visson']; ?> </p>
 
             </div>
-
+<?php } ?>
         </section>
 
         <!-- Workshop Journey Section -->
@@ -78,27 +90,30 @@
                         <div class="paperContent">
                             <!-- Opening Spell Content (Default) -->
                             <div class="contentBlock active" id="opening">
+                                     <?php foreach ($run_spill as $workshops) { ?>
                                 <h3>Opening Spell</h3>
-                                <p>In this phase, participants are introduced to the world of web development and learn the web actually works. They learn the role of browsers, servers, and code, and begin casting their first basic spells using HTML. This is where curiosity turns into creation.</p>
+                                <p><?php echo $workshops['opening_spell']; ?></p>
                             </div>
+                           
                             
                             <!-- Core Magic Content -->
                             <div class="contentBlock" id="core1">
                                 <h3>Core Magic</h3>
-                                <p>Participants dive deeper into CSS styling and JavaScript interactivity. They learn to create responsive designs and add dynamic behaviors to their web pages.</p>
+                                <p><?php echo $workshops['core_magic']; ?></p>
                             </div>
                             
                             <!-- Advanced Spells Content -->
                             <div class="contentBlock" id="core2">
                                 <h3>Advanced Spells</h3>
-                                <p>Master advanced techniques including animations, API integration, and modern frameworks. Transform simple pages into powerful web applications.</p>
+                                <p><?php echo $workshops['advanced_spell']; ?></p>
                             </div>
                             
                             <!-- Final Quest Content -->
                             <div class="contentBlock" id="core3">
                                 <h3>Final Quest</h3>
-                                <p>Apply all learned skills to build a complete project. Showcase your magical web development abilities in a final artifact.</p>
+                                <p><?php echo $workshops['final_quest']; ?></p>
                             </div>
+                             <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -122,84 +137,30 @@
                 <div class="workshopDetailsGrid">
 
                     <!--  member 1  -->
-
                     <div class="cardsContainer" data-aos="flip">
+                        <?php foreach ($run_members as $members) { ?>
+                        
                         <div class="flipCard card1">
                             <div class="frontCard">
-                                <img src="assets/img/backCardCrew.jpg" alt="TechSolve Workshop" loading="lazy">
+                                <img src="assets/img/backCardCrew.png" alt="<?php echo $members['user_name']; ?>" loading="lazy">
                             </div>
                             <div class="backCard">
-                                <img src="assets/img/workshopCard.jpg" alt="Yasmin" loading="lazy">
+                                <img src="assets/img/anaaq/<?php echo $members['Image']; ?>" alt="<?php echo $members['user_name']; ?>" loading="lazy">
+                            </div>
+                            <br>
+                            <!-- added by radwan to show the name -->
+                            <div>
+                                <p><?php echo $members['user_name']; ?></p>
                             </div>
                         </div>
+                        <?php } ?>
                     </div>
 
-                    <!--  member 2  -->
-
-                    <div class="cardsContainer" data-aos="flip">
-                        <div class="flipCard card2">
-                            <div class="frontCard">
-                                <img src="assets/img/backCardCrew.jpg" alt="TechSolve Workshop" loading="lazy">
-                            </div>
-                            <div class="backCard">
-                                <img src="assets/img/workshopCard.jpg" alt="Omar" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--  member 3  -->
-
-                    <div class="cardsContainer" data-aos="flip">
-                        <div class="flipCard card3">
-                            <div class="frontCard">
-                                <img src="assets/img/backCardCrew.jpg" alt="TechSolve Workshop" loading="lazy">
-                            </div>
-                            <div class="backCard">
-                                <img src="assets/img/workshopCard.jpg" alt="Awad" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--  member 4  -->
-
-                    <div class="cardsContainer" data-aos="flip">
-                        <div class="flipCard card4">
-                            <div class="frontCard">
-                                <img src="assets/img/backCardCrew.jpg" alt="TechSolve Workshop" loading="lazy">
-                            </div>
-                            <div class="backCard">
-                                <img src="assets/img/workshopCard.jpg" alt="techSolveCard" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--  member 5  -->
-
-                    <div class="cardsContainer" data-aos="flip">
-                        <div class="flipCard card5">
-                            <div class="frontCard">
-                                <img src="assets/img/backCardCrew.jpg" alt="TechSolve Workshop" loading="lazy">
-                            </div>
-                            <div class="backCard">
-                                <img src="assets/img/workshopCard.jpg" alt="techSolveCard" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--  member 6  -->
-
-                    <div class="cardsContainer" data-aos="flip">
-                        <div class="flipCard card6">
-                            <div class="frontCard">
-                                <img src="assets/img/backCardCrew.jpg" alt="TechSolve Workshop" loading="lazy">
-                            </div>
-                            <div class="backCard">
-                                <img src="assets/img/workshopCard.jpg" alt="techSolveCard" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
+                
+                    
+                    
+                
+                   
 
                 </div>
             </div>
