@@ -1,3 +1,7 @@
+<?php
+include 'connection.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,7 +84,7 @@
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
                        </div>
-                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
+                       <a href="crewDetails.php?committee_id=6" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 2. DD -->
                     <div class="subCard">
@@ -91,7 +95,7 @@
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
                        </div>
-                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
+                       <a href="crewDetails.php?committee_id=7" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 3. MP -->
                     <div class="subCard">
@@ -102,7 +106,7 @@
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
                        </div>   
-                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
+                       <a href="crewDetails.php?committee_id=10" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 4. SMM -->
                     <div class="subCard">
@@ -113,7 +117,7 @@
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
                        </div>   
-                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
+                       <a href="crewDetails.php?committee_id=5" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                 </div>
             </div>
@@ -130,7 +134,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="crewDetails.php" class="btn btnPrimary btnSm">Know Us !</a>
+                <a href="crewDetails.php?committee_id=3" class="btn btnPrimary btnSm">Know Us !</a>
             </div>
 
             <div class="boardItem" data-aos="fade-up" data-aos-delay="300">
@@ -145,7 +149,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="crewDetails.php" class="btn btnPrimary btnSm">Know Us !</a>
+                <a href="crewDetails.php?committee_id=12" class="btn btnPrimary btnSm">Know Us !</a>
             </div>
             <div class="boardItem" data-aos="fade-up" data-aos-delay="400" onclick="openModal(this)">
                 <h3 class="roleTitle" style="cursor: pointer;">External Relations</h3>
@@ -174,7 +178,7 @@
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
                        </div>   
-                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
+                       <a href="crewDetails.php?committee_id=8" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 2. L -->
                     <div class="subCard">
@@ -185,7 +189,7 @@
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
                        </div>   
-                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
+                       <a href="crewDetails.php?committee_id=11" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 3. CR -->
                     <div class="subCard">
@@ -196,7 +200,7 @@
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
                        </div>   
-                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
+                       <a href="crewDetails.php?committee_id=12" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                     <!-- 4. PR -->
                     <div class="subCard">
@@ -207,7 +211,7 @@
                                <div class="flipSide flipBack"><img src="./assets/img/crewFrontCard.png" loading="lazy"></div>
                            </div>
                        </div>   
-                       <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
+                       <a href="crewDetails.php?committee_id=11" class="btn btnPrimary btnSm">Discover More</a>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,25 @@
+<?php
+include 'connection.php';
+
+if(isset($_GET['committee_id'])) {
+    $committee_id = $_GET['committee_id'];
+
+    // Fetch committee details
+    $select_committee = "SELECT committe_name, head_id, committee_description FROM committees WHERE committee_id = '$committee_id'";
+    $run_committee = mysqli_query($connect, $select_committee);
+    $committee = mysqli_fetch_assoc($run_committee);
+
+    // Fetch head details
+    $head_id = $committee['head_id'];
+    $select_head = "SELECT user_name, image FROM users WHERE user_id = '$head_id'";
+    $run_head = mysqli_query($connect, $select_head);
+    $head = mysqli_fetch_assoc($run_head);
+
+    // Fetch members
+    $select_members = "SELECT u.user_id, u.user_name, w.workshop_name FROM users u JOIN workshops w ON u.workshop_id = w.workshop_id WHERE u.committee_id = '$committee_id' AND u.user_id != '$head_id' And status=1 " ;
+    $members = mysqli_query($connect, $select_members);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +38,7 @@
 
 <body>
 
-    <!-- Back Button -->
+      <!-- Back Button -->
     <a href="crew.php" class="backButton" aria-label="Go back to crew page">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M19 12H5M12 19l-7-7 7-7"/>
@@ -24,25 +46,35 @@
         <span>Back</span>
     </a>
 
+    <!-- Committee Details Section -->
     <section class="sectionBlock container">
-        
         <div class="titleWrapper" data-aos="fade-down">
             <h1 class="mainTitle">
-                <span class="textPrimary">DD</span> 
+                <span class="textPrimary"><?php echo $committee['committe_name']; ?></span>
                 <span class="textDark">Head</span>
             </h1>
             <div class="sectionDivider"></div>
         </div>
 
         <div class="headLayout">
-            
             <div class="flipCard headCard smCard" data-aos="flip">
                 <div class="flipInner">
                     <div class="flipSide flipFront">
                         <img src="./assets/img/backCardCrew.png" loading="lazy" alt="Head" />
                     </div>
                     <div class="flipSide flipBack">
-                        <img src="./assets/img/crewFrontCard.png" loading="lazy" alt="Details" />
+                        <div class="card" style="width: 18rem;">
+  <img src="<?php echo $head['image']; ?>" class="card-img-top" alt="">
+  <div class="card-body">
+    <h5 class="card-title"><?php echo $head['user_name']; ?></h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"></li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">profile</a>
+  </div>
+</div>
                     </div>
                 </div>
             </div>
@@ -51,129 +83,52 @@
                 <div class="paperContent">
                     <h2 class="paperTitle">Job Description</h2>
                     <p class="paperText">
-                        Developing Members In Negotiation, Persuasive And Communication Skills. 
-                        Helping Members To Discover Their Own Skills And What Can They Do. 
-                        Responsible For The Budget And The Cash Inflow And Outflow. 
-                        Making CR Outing For All Members To Create Connections. 
-                        After Each Phase Creating One To One Meeting For Each Member.
+               <?php echo $committee['committee_description']; ?>
                     </p>
                 </div>
             </div>
-            
         </div>
     </section>
 
     <section class="sectionBlock container">
-        
         <div class="titleWrapper" data-aos="fade-up">
             <h1 class="mainTitle">
-                <span class="textPrimary">DD</span> 
+                <span class="textPrimary"><?php echo $committee['committe_name']; ?></span>
                 <span class="textDark">Members</span>
             </h1>
             <div class="sectionDivider"></div>
         </div>
 
         <div class="membersGrid">
-            
-            <div class="flipCard memberCard smCard card1" data-aos="flip">
-                <div class="flipInner">
-                    <div class="flipSide flipFront">
-                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
-                    </div>
-                    <div class="flipSide flipBack">
-                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="flipCard memberCard smCard card2" data-aos="flip">
-                <div class="flipInner">
-                    <div class="flipSide flipFront">
-                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
-                    </div>
-                    <div class="flipSide flipBack">
-                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="flipCard memberCard smCard card3" data-aos="flip">
-                <div class="flipInner">
-                    <div class="flipSide flipFront">
-                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
-                    </div>
-                    <div class="flipSide flipBack">
-                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="flipCard memberCard smCard card4" data-aos="flip">
-                <div class="flipInner">
-                    <div class="flipSide flipFront">
-                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
-                    </div>
-                    <div class="flipSide flipBack">
-                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="flipCard memberCard smCard card1" data-aos="flip">
-                <div class="flipInner">
-                    <div class="flipSide flipFront">
-                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
-                    </div>
-                    <div class="flipSide flipBack">
-                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="flipCard memberCard smCard card2" data-aos="flip">
-                <div class="flipInner">
-                    <div class="flipSide flipFront">
-                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
-                    </div>
-                    <div class="flipSide flipBack">
-                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="flipCard memberCard smCard card3" data-aos="flip">
-                <div class="flipInner">
-                    <div class="flipSide flipFront">
-                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
-                    </div>
-                    <div class="flipSide flipBack">
-                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="flipCard memberCard smCard card4" data-aos="flip">
-                <div class="flipInner">
-                    <div class="flipSide flipFront">
-                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
-                    </div>
-                    <div class="flipSide flipBack">
-                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-
-            <div class="flipCard memberCard smCard card1" data-aos="flip">
-                <div class="flipInner">
-                    <div class="flipSide flipFront">
-                        <img src="./assets/img/backCardCrew.png" loading="lazy" />
-                    </div>
-                    <div class="flipSide flipBack">
-                        <img src="./assets/img/crewFrontCard.png" loading="lazy" />
-                    </div>
-                </div>
-            </div>
-
+            <?php
+            if($members && mysqli_num_rows($members) > 0) {
+                while($member = mysqli_fetch_assoc($members)) {
+                    echo '<div class="flipCard memberCard smCard" data-aos="flip">
+                        <div class="flipInner">
+                            <div class="flipSide flipFront">
+                                <img src="./assets/img/backCardCrew.png" loading="lazy" />
+                            </div>
+                            <div class="flipSide flipBack">
+                                <div class="card" style="width: 18rem;">
+  <img src="./assets/img/default-user.png" class="card-img-top" alt="">
+  <div class="card-body">
+    <h5 class="card-title">' . $member['user_name'] . '</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Workshop: ' . $member['workshop_name'] . '</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Profile</a>
+  </div>
+</div>
+                            </div>
+                        </div>
+                    </div>';
+                }
+            } else {
+                echo '<p>No members found for this committee.</p>';
+            }
+            ?>
         </div>
     </section>
 
