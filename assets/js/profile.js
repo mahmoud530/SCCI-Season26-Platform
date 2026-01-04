@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!settingsIcon || !settingsMenu) return;
 
   let isOpen = false;
-  const animationDuration = 350;
+  const animationDuration = 450; // نفس مدة الـ CSS
 
   const openMenu = (e) => {
     e.stopPropagation();
@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     settingsMenu.classList.remove('closing');
     settingsMenu.classList.add('opening');
-    settingsMenu.style.visibility = 'visible';
     isOpen = true;
   };
 
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     settingsMenu.classList.add('closing');
 
     setTimeout(() => {
-      settingsMenu.style.visibility = 'hidden';
       settingsMenu.classList.remove('closing');
       isOpen = false;
     }, animationDuration);

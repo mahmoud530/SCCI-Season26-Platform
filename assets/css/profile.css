@@ -91,6 +91,7 @@ body {
   align-items: center;
 }
 
+/* icon */
 .settingsIcon {
   font-size: var(--fs-lg);
   color: var(--color-secondary-dark);
@@ -105,31 +106,49 @@ body {
   color: var(--color-primary);
 }
 
-/* ---------------------------------------------------------------------------
-   Settings Menu
---------------------------------------------------------------------------- */
+/* menu base state */
 .settingsMenu {
   position: absolute;
   left: 140%;
   top: 20%;
   width: 155px;
   height: 220px;
+
   opacity: 0;
   visibility: hidden;
+
   transform: translateY(-50%) translateY(20px) scaleY(0);
   transform-origin: top left;
+
   z-index: 50;
+  pointer-events: none; /* مهم */
 }
 
+/* opening */
 .settingsMenu.opening {
   visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
   animation: rollUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* Closing animation: reverse of opening */
+/* closing */
 .settingsMenu.closing {
-  visibility: visible; /* keep visible during animation */
+  visibility: visible;
+  pointer-events: none;
   animation: rollUpReverse 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* animations ll roll*/
+@keyframes rollUp {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateY(20px) scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateY(0) scaleY(1);
+  }
 }
 
 @keyframes rollUpReverse {
@@ -141,11 +160,6 @@ body {
     opacity: 0;
     transform: translateY(-50%) translateY(20px) scaleY(0);
   }
-}
-
-@keyframes rollUp {
-  from { opacity: 0; transform: translateY(-50%) translateY(20px) scaleY(0); }
-  to { opacity: 1; transform: translateY(-50%) translateY(0) scaleY(1); }
 }
 
 /* ---------------------------------------------------------------------------
@@ -227,8 +241,6 @@ body {
   font-weight: var(--fw-bold);
   text-align: left;
 }
-
-
 .infoValue {
   font-size: var(--fs-md);
   color: var(--color-black);
@@ -285,7 +297,6 @@ body {
 
 .card-container {
   background: linear-gradient(135deg,#c8a97e 0%,#e3cfae 40%,#fff3e3 50%,#e3cfae 60%,#c8a97e 100%);
-  border: 12px solid linear-gradient(135deg,#c8a97e 0%,#e3cfae 40%,#fff3e3 50%, #e3cfae 60%,#c8a97e 100%);
   border-radius: 8px;
   padding: 30px 40px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
