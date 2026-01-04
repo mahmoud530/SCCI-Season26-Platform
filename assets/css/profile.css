@@ -139,7 +139,7 @@ body {
   animation: rollUpReverse 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* animations ll roll*/
+/* animations */
 @keyframes rollUp {
   from {
     opacity: 0;
@@ -161,6 +161,7 @@ body {
     transform: translateY(-50%) translateY(20px) scaleY(0);
   }
 }
+
 
 /* ---------------------------------------------------------------------------
    Settings Paper
