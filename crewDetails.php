@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include './includes/config.php';
 
 if(isset($_GET['committee_id'])) {
     $committee_id = $_GET['committee_id'];
