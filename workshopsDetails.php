@@ -51,7 +51,7 @@ $run_spill = mysqli_query($connect, $select_spill);
          <?php foreach ($run_workshop as $workshops) { ?>
         <section class="workshopsHero">
         
-            <div class="magicDivider">
+            <div class="magicDivider" data-aos="fade-down" data-aos-duration="1000">
                  <h2 class="heroTitle"><?php echo $workshops['workshop_name']; ?></h2>
             </div>
             
@@ -60,18 +60,18 @@ $run_spill = mysqli_query($connect, $select_spill);
             </a>
 
             <div class="workshopDescription">
-                <div>
-                    <img class="workshopImage" src="assets/img/<?php echo $workshops['workshop_image']; ?>" alt="Devolgy Image" loading="lazy">
+                <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <img class="workshopImage" src="assets/img/workshop-icons/<?php echo $workshops['workshop_image']; ?>" alt="Devolgy Image" loading="lazy">
                 </div>
 
-                <p class="workshopDetails"><?php echo $workshops['visson']; ?> </p>
+                <p class="workshopDetails" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400"><?php echo $workshops['visson']; ?> </p>
 
             </div>
 <?php } ?>
         </section>
 
         <!-- Workshop Journey Section -->
-        <section class="workshopJourneySection">
+        <section class="workshopJourneySection" data-aos="fade-up" data-aos-duration="1000">
             <div class="container">
                 <h2 class="heroTitle">The Devology <span>Spell Journey</span></h2>
                 
@@ -126,35 +126,35 @@ $run_spill = mysqli_query($connect, $select_spill);
 
         <!-- members in this workshop -->
          
-        <section class="workshopsSection">
+        <section class="workshopsSection" data-aos="fade-up" data-aos-duration="1000">
 
-            <div class="MemberCardTitle">
+            <div class="MemberCardTitle" data-aos="zoom-in" data-aos-duration="800">
                 <h2 class="heroTitle">Members</h2>
                 <hr>
             </div>
 
             <div class="container">
                 <div class="workshopDetailsGrid">
-
-                    <!--  member 1  -->
+                    <?php foreach ($run_members as $members) { ?>
+                    <!--  member card  -->
                     <div class="cardsContainer" data-aos="flip">
-                        <?php foreach ($run_members as $members) { ?>
-                        
                         <div class="flipCard card1">
                             <div class="frontCard">
                                 <img src="assets/img/backCardCrew.png" alt="<?php echo $members['user_name']; ?>" loading="lazy">
                             </div>
                             <div class="backCard">
-                                <img src="assets/img/anaaq/<?php echo $members['Image']; ?>" alt="<?php echo $members['user_name']; ?>" loading="lazy">
-                            </div>
-                            <br>
-                            <!-- added by radwan to show the name -->
-                            <div>
-                                <p><?php echo $members['user_name']; ?></p>
+                                <div class="memberInfo">
+                                    <div class="memberImageContainer">
+                                        <img src="assets/img/anaaq/<?php echo $members['Image']; ?>" alt="<?php echo $members['user_name']; ?>" loading="lazy" class="memberImage">
+                                    </div>
+                                    <div class="memberName">
+                                        <h3><?php echo $members['user_name']; ?></h3>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <?php } ?>
                     </div>
+                    <?php } ?>
 
                 
                     

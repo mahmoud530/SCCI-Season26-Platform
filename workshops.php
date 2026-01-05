@@ -42,10 +42,10 @@ $result = mysqli_query($connect, $select);
     <!-- Hero Section -->
     <header class="workshopsHero">
         <div class="container">
-            <h1 class="heroTitle">DISCOVER THE <span>MAGIC WORKSHOPS</span></h1>
-            <p class="heroSubtitle">EACH WORKSHOP UNLOCKS A NEW SKILL</p>
+            <h1 class="heroTitle" data-aos="fade-down" data-aos-duration="1000">DISCOVER THE <span>MAGIC WORKSHOPS</span></h1>
+            <p class="heroSubtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">EACH WORKSHOP UNLOCKS A NEW SKILL</p>
 
-            <div class="magicDivider">
+            <div class="magicDivider" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
                 <i class="fas fa-gem magic-icon"></i> <!-- Diamond/Star Icon -->
                 <span>EXPLORE WORKSHOPS</span>
                 <i class="fas fa-hat-wizard magic-icon"></i> <!-- Wizard Hat Icon -->
@@ -54,7 +54,7 @@ $result = mysqli_query($connect, $select);
     </header>
     <main>
         <!-- Workshops Grid -->
-          <section class="workshopsSection">
+          <section class="workshopsSection" data-aos="fade-up" data-aos-duration="1000">
     <div class="container">
         <div class="workshopCardsGrid">
             <?php foreach ($result as $workshops) { ?>

@@ -10,6 +10,27 @@
 .workshopImage {
     width: 400px;
     height: auto;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-15px) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(-15px) rotate(2deg);
+    }
 }
 
 .workshopDetails {
@@ -25,6 +46,122 @@
 .MemberCardTitle {
     text-align: center;
     margin-bottom: var(--space-8);
+}
+
+/* Back Card Member Info Styling */
+.backCard {
+    background: linear-gradient(135deg, var(--color-secondary-dark) 0%, var(--color-primary-dark) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-6);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+}
+
+/* Decorative Stars */
+.backCard::before,
+.backCard::after {
+    content: '✦';
+    position: absolute;
+    color: var(--color-warning);
+    font-size: 2rem;
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+.backCard::before {
+    top: 20px;
+    left: 20px;
+    animation-delay: 0s;
+}
+
+.backCard::after {
+    bottom: 20px;
+    right: 20px;
+    animation-delay: 1.5s;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+}
+
+.memberInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-5);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.memberImageContainer {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border-radius: 40px;
+    padding: 6px;
+    background: linear-gradient(135deg, #FFD700, #FFA500, #FFD700);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.7),
+        inset 0 0 20px rgba(255, 215, 0, 0.3);
+    animation: goldenGlow 3s ease-in-out infinite;
+}
+
+@keyframes goldenGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 40px rgba(255, 215, 0, 0.7),
+            inset 0 0 20px rgba(255, 215, 0, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 60px rgba(255, 215, 0, 0.9),
+            inset 0 0 30px rgba(255, 215, 0, 0.5);
+    }
+}
+
+.memberImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+}
+
+.memberName {
+    text-align: center;
+    padding: var(--space-3) var(--space-6);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    border: 2px solid rgba(255, 215, 0, 0.6);
+    min-width: 250px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.memberName h3 {
+    font-family: 'Cinzel', serif;
+    font-size: var(--fs-xl);
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5),
+        0 0 10px rgba(255, 215, 0, 0.5);
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .workshopDetailsGrid {
