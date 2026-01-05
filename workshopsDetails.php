@@ -19,7 +19,9 @@ if (isset($_GET['category_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devolgy</title>
+    <?php foreach ($run_workshop as $workshops) { ?>
+    <title><?php echo $workshops['workshop_name']; ?></title>
+    <?php } ?>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
