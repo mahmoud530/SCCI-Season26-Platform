@@ -58,12 +58,13 @@
               alt="Settings Paper">
 
             <div class="settingsLinks">
-              <a href="edit-profile.php" class="settingsLink">
+              <a href="#" class="settingsLink" id="openEditProfile">
                 <i class="fa-solid fa-pen-to-square"></i>
                 Edit
               </a>
 
-              <a href="logout.php" class="settingsLink">
+
+              <a href="home.php" class="settingsLink">
                 <i class="fa-solid fa-right-from-bracket"></i>
                 Logout
               </a>
@@ -129,6 +130,70 @@
     </div>
   </article>
 </section>
+
+
+<!-- Edit Profile Popup -->
+<section>
+
+  <div class="editProfileOverlay" id="editProfileOverlay">
+    <div class="editProfilePopup">
+
+      <img src="assets/img/infoPaper.png" class="editPaperImg" alt="">
+
+      <h3 class="editTitle">Edit Profile</h3>
+
+      <div class="editField">
+        <span class="fieldLabel">Name:</span>
+        <span class="oldValue">Jana Haitham</span>
+        <button class="editBtn">Edit</button>
+        <input type="text" value="Jana Haitham">
+      </div>
+
+      <div class="editField">
+        <span class="fieldLabel">Email:</span>
+        <span class="oldValue">janahaitham436@gmail.com</span>
+        <button class="editBtn">Edit</button>
+        <input type="email" value="janahaitham436@gmail.com">
+      </div>
+
+      <div class="editField">
+        <span class="fieldLabel">Phone:</span>
+        <span class="oldValue">+20 100 123 4567</span>
+        <button class="editBtn">Edit</button>
+        <input type="tel" value="+20 100 123 4567">
+      </div>
+
+      <div class="editField">
+        <span class="fieldLabel">Password:</span>
+        <span class="oldValue">********</span>
+        <button class="editBtn">Edit</button>
+        <input type="password" placeholder="New password">
+      </div>
+
+      <div class="editField">
+        <span class="fieldLabel">GitHub:</span>
+        <span class="oldValue">github.com/example</span>
+        <button class="editBtn">Edit</button>
+        <input type="text" value="github.com/example">
+      </div>
+
+      <div class="editField">
+        <span class="fieldLabel">LinkedIn:</span>
+        <span class="oldValue">linkedin.com/in/example</span>
+        <button class="editBtn">Edit</button>
+        <input type="text" value="linkedin.com/in/example">
+      </div>
+
+      <button class="saveProfile">Save Changes</button>
+      <button class="closePopup">Close</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
   <!-- History Section -->
 
 <section class="historySection">

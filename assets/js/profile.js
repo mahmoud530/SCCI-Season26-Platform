@@ -34,3 +34,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', closeMenu);
 });
+
+// Profile Edit Popup and Inline Editing
+
+document.addEventListener('DOMContentLoaded', () => {
+  const saveBtn = document.querySelector('.saveProfile');
+
+saveBtn.addEventListener('click', () => {
+
+  document.querySelectorAll('.editField').forEach(field => {
+    const input = field.querySelector('input');
+    const valueSpan = field.querySelector('.oldValue');
+
+    if (input && valueSpan && input.value.trim() !== '') {
+      valueSpan.textContent = input.type === 'password'
+        ? '********'
+        : input.value;
+    }
+
+    field.classList.remove('editing');
+  });
+
+  overlay.classList.remove('active');
+
+  // For backend later:
+  // Collect data here and send via fetch/AJAX
+});
+
+
+  const openEditBtn = document.getElementById('openEditProfile');
+  const overlay = document.getElementById('editProfileOverlay');
+  const closePopup = document.querySelector('.closePopup');
+
+  if (!openEditBtn || !overlay) return;
+
+  // Open popup
+  openEditBtn.addEventListener('click', (e) => {
+    e.preventDefault();   // 🔥 prevents 404
+    e.stopPropagation();
+    overlay.classList.add('active');
+  });
+
+  // Close popup button
+  closePopup.addEventListener('click', () => {
+    overlay.classList.remove('active');
+  });
+
+  // Close on background click
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) {
+      overlay.classList.remove('active');
+    }
+  });
+
+  // Inline edit toggle
+  document.querySelectorAll('.editBtn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.editField').classList.toggle('editing');
+    });
+  });
+
+});
+
