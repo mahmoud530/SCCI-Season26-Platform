@@ -81,7 +81,7 @@ if (isset($_GET['category_id'])) {
         <section class="workshopJourneySection" data-aos="fade-up" data-aos-duration="1000">
             <div class="container">
                 <h2 class="heroTitle"><?php echo $workshops['workshop_name']; ?> <span>Spell Journey</span></h2>
-
+                <hr>
                 <div class="journeyContainer">
                     <?php foreach ($run_spill as $workshops) { ?>
                         <!-- Navigation Buttons (Left Side) -->
@@ -94,31 +94,23 @@ if (isset($_GET['category_id'])) {
                         </div>
                     <?php } ?>
 
-                    <!-- Paper Content Display (Right Side) -->
-                    <div class="journeyPaper">
-                        <img src="assets/img/paperWorkshop.png" alt="Workshop Paper" class="paperBg">
-                        <div class="paperContent">
+                    <!-- Content Card Display (Right Side) -->
+                    <div class="journeyCard">
+                        <div class="cardContentWrapper">
                             <!-- Opening Spell Content (Default) -->
                             <div class="contentBlock active" id="opening">
                                 <?php foreach ($run_spill as $workshops) { ?>
                                     <h3><?php echo $workshops['button1']; ?> </h3>
                                     <p><?php echo $workshops['opening_spell']; ?></p>
                                 </div>
-
-
-                                <!-- Core Magic Content -->
                                 <div class="contentBlock" id="core1">
                                     <h3><?php echo $workshops['button2']; ?> </h3>
                                     <p><?php echo $workshops['core_magic']; ?></p>
                                 </div>
-
-                                <!-- Advanced Spells Content -->
                                 <div class="contentBlock" id="core2">
                                     <h3><?php echo $workshops['button3']; ?> </h3>
                                     <p><?php echo $workshops['advanced_spell']; ?></p>
                                 </div>
-
-                                <!-- Final Quest Content -->
                                 <div class="contentBlock" id="core3">
                                     <h3><?php echo $workshops['button4']; ?> </h3>
                                     <p><?php echo $workshops['final_quest']; ?></p>
