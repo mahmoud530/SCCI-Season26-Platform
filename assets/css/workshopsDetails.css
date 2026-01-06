@@ -8,7 +8,7 @@
 }
 
 .workshopImage {
-    width: 400px;
+    width: 450px;
     height: auto;
     animation: floatImage 4s ease-in-out infinite;
 }
@@ -34,7 +34,8 @@
 }
 
 .workshopDetails {
-    font-size: var(--fs-base);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
     color: var(--color-primary-dark);
     font-family: 'Cinzel', serif;
     width: 55%;
