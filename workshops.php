@@ -54,7 +54,7 @@ $result = mysqli_query($connect, $select);
     </header>
     <main>
         <!-- Workshops Grid -->
-          <section class="workshopsSection" data-aos="fade-up" data-aos-duration="1000">
+<section class="workshopsSection">
     <div class="container">
         <div class="workshopCardsGrid">
             <?php foreach ($result as $workshops) { ?>
