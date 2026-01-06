@@ -31,7 +31,7 @@
 
             <div class="titleWrapper">
                 <hr class="titleHr">
-                <h2 class="aboutTitle text-primary">WHO ARE WE?</h2>
+                <h3 class="aboutTitle text-primary">WHO ARE WE?</h3>
                 <hr class="titleHr">
             </div>
 
@@ -43,7 +43,7 @@
 
             <div class="titleWrapper2">
                 <hr class="titleHr">
-                <h2 class="aboutTitle text-primary">WHAT MAKES US DIFFERENT?</h2>
+                <h3 class="aboutTitle text-primary">WHAT MAKES US DIFFERENT?</h3>
                 <hr class="titleHr">
             </div>
 
@@ -59,20 +59,23 @@
 </section>
 
 <!-- CREW CARDS SLIDER -->
-<div class="sliderWrapper">
+<section>
+    <div class="sliderWrapper">
+        <button class="arrow left" id="prevBtn">&#10094;</button>
 
-    <button class="arrow left" id="prevBtn">&#10094;</button>
+        <div class="cardStack">
+            <img src="./assets/img/workshopCard1.png" class="card">
+            <img src="./assets/img/workshopCard2.png" class="card">
+            <img src="./assets/img/workshopCard3.png" class="card">
+        </div>
 
-    <div class="cardStack">
-        <img src="./assets/img/workshopCard.png" class="card active">
-        <img src="./assets/img/workshopCard.png" class="card">
-        <img src="./assets/img/workshopCard.png" class="card">
+        <button class="arrow right" id="nextBtn">&#10095;</button>
     </div>
+</section>
 
-    <button class="arrow right" id="nextBtn">&#10095;</button>
 
-</div>
 
 <script src="./assets/js/about.js"></script>
+
 </body>
 </html>
