@@ -40,26 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const saveBtn = document.querySelector('.saveProfile');
 
-saveBtn.addEventListener('click', () => {
-
-  document.querySelectorAll('.editField').forEach(field => {
-    const input = field.querySelector('input');
-    const valueSpan = field.querySelector('.oldValue');
-
-    if (input && valueSpan && input.value.trim() !== '') {
-      valueSpan.textContent = input.type === 'password'
-        ? '********'
-        : input.value;
-    }
-
-    field.classList.remove('editing');
+  saveBtn.addEventListener('click', () => {
+    // Submit the form
+    const form = document.querySelector('form[method="POST"]');
+    form.submit();
   });
-
-  overlay.classList.remove('active');
-
-  // For backend later:
-  // Collect data here and send via fetch/AJAX
-});
 
 
   const openEditBtn = document.getElementById('openEditProfile');

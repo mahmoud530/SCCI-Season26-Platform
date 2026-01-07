@@ -452,49 +452,46 @@ body {
   margin-bottom: 20px;
 }
 
-.editField {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 14px;
+/* form */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
-.fieldLabel {
-  font-weight: bold;
-  color: var(--color-secondary-dark);
-  text-transform: uppercase;
+.input-group {
+    margin-bottom: var(--space-5);
 }
 
-.oldValue {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: var(--color-black);
-  word-break: break-word;
+.input-group label {
+    font-size: var(--fs-sm);
+    color: var(--color-primary-dark);
+    margin-bottom: var(--space-2);
+    display: block;
 }
 
-.editBtn {
-  background: none;
-  border: none;
-  color: var(--color-primary);
-  font-weight: bold;
-  cursor: pointer;
+.input-group input {
+    width: 100%;
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-dark);
+    background: linear-gradient(to bottom, #5a5a5a, #6d6d6d);
+    color: var(--color-white);
+    font-size: var(--fs-sm);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.4);
+    outline: none;
 }
 
-.editField input {
-  grid-column: 1 / -1;
-  margin-top: 6px;
-  padding: 6px;
-  display: none;
-  border: 1px solid #a0866b;
-  background: #fff8ef;
+.input-group input::placeholder {
+    color: var(--text-light);
+    font-style: italic;
 }
 
-.editField.editing input {
-  display: block;
-}
-
-.editField.editing .oldValue {
-  display: none;
+.input-group input:focus {
+    box-shadow:
+        inset 0 3px 5px rgba(0, 0, 0, 0.4),
+        0 0 6px rgba(197, 37, 37, 0.4);
 }
 
 .closePopup {
