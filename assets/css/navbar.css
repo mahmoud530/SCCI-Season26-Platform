@@ -24,12 +24,12 @@ header {
   align-items: center;
   gap: 8rem;
   padding: 1rem 4rem;
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
     black,
     rgba(0, 0, 0, 0.5),
     transparent
-  );
+  ); */
   backdrop-filter: blur(2px);
 }
 

@@ -26,6 +26,7 @@ $result = mysqli_query($connect, $select);
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/root.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="assets/css/navbar.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="assets/css/workshops.css?v=<?php echo time(); ?>">
     <!-- Custom Page Styles -->
     <!-- AOS library -->
