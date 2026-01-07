@@ -13,7 +13,6 @@ $result = mysqli_query($connect, $select);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Workshops</title>
-
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +28,6 @@ $result = mysqli_query($connect, $select);
     <link rel="stylesheet" href="assets/css/root.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="assets/css/workshops.css?v=<?php echo time(); ?>">
     <!-- Custom Page Styles -->
-
     <!-- AOS library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -91,7 +89,7 @@ $result = mysqli_query($connect, $select);
 
     </main>
 
-
+ <?php include 'includes/footer.php'; ?>
 
     <!-- Scripts -->
     <script src="assets/js/all.min.js" defer></script>
