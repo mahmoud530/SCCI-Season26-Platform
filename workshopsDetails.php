@@ -60,7 +60,7 @@ if (isset($_GET['category_id'])) {
                 </div>
 
                 <a href="workshops.php" class="backBtn">
-                    <i class="fas fa-arrow-left"></i> Back
+                    <i class="fas fa-arrow-left"></i>
                 </a>
 
                 <div class="workshopDescription">
