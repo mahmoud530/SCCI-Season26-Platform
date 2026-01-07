@@ -2,11 +2,18 @@
 const scrollTopBtn = document.getElementById('scrollTopBtn');
 
 if (scrollTopBtn) {
+    // Get the first section to determine when to show the button
+    const firstSection = document.querySelector('.workshopsHero');
+
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            scrollTopBtn.classList.add('show');
-        } else {
-            scrollTopBtn.classList.remove('show');
+        if (firstSection) {
+            const firstSectionHeight = firstSection.offsetHeight;
+
+            if (window.pageYOffset > firstSectionHeight) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
         }
     });
 

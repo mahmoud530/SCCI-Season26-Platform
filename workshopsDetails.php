@@ -173,6 +173,11 @@ if (isset($_GET['category_id'])) {
 
     </main>
 
+    <!-- Scroll to Top Button -->
+    <div class="scrollTopBtn" id="scrollTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
 
 
 

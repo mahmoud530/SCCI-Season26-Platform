@@ -222,7 +222,7 @@
 
 .scrollTopBtn:hover {
     background-color: var(--color-primary-dark);
-    transform: translateY(-5px);
+    transform: scale(1.1);
 }
 
 /* Responsive Design */
