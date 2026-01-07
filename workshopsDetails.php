@@ -20,7 +20,7 @@ if (isset($_GET['category_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php foreach ($run_workshop as $workshops) { ?>
-    <title><?php echo $workshops['workshop_name']; ?></title>
+    <title>SCCI - <?php echo $workshops['workshop_name']; ?></title>
     <?php } ?>
 
     <!-- Fonts -->
