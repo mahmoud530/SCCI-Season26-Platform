@@ -27,6 +27,7 @@ if(isset($_GET['committee_id'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SCCI - crewDetails</title>
+    <link rel="icon" href="./assets/icons/logoSCCI.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/crewDetails.css" />
      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
