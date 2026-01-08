@@ -23,14 +23,14 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 8rem;
-  padding: 1rem 4rem;
+  /* padding: 1rem 4rem;
   background: linear-gradient(
     to bottom,
     black,
     rgba(0, 0, 0, 0.5),
     transparent
   );
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px); */
 }
 
 .logo {
@@ -148,7 +148,7 @@ header {
 
 .sideNav {
   z-index: 50;
-  background-color: #0a0e17a8;
+  /* background-color: #0a0e17a8; */
   backdrop-filter: blur(5px);
   position: fixed;
   width: 100%;
@@ -173,23 +173,23 @@ header {
   min-width: 340px;
  */
 
-  /* The background color */
+  /* The background color
   background: radial-gradient(
       circle at 25% 20%,
       rgba(140, 90, 40, 0.25),
       transparent 55%
     ),
-    radial-gradient(circle at 70% 80%, rgba(160, 110, 60, 0.2), transparent 60%),
+    /* radial-gradient(circle at 70% 80%, rgba(160, 110, 60, 0.2), transparent 60%),
     repeating-linear-gradient(
       45deg,
       rgba(0, 0, 0, 0.015),
       rgba(0, 0, 0, 0.015) 1px,
       transparent 1px,
       transparent 3px
-    ),
-    linear-gradient(180deg, #e6c89a, #d4ad73, #c2955f);
+    ), */
+    /* linear-gradient(180deg, #e6c89a, #d4ad73, #c2955f);
   padding: 6rem 1rem 1rem;
-  width: 40%;
+  width: 40%; */ 
   /* -------------------------- */
 
   display: flex;

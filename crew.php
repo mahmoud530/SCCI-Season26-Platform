@@ -12,6 +12,9 @@ include './includes/config.php';
     <link rel="icon" href="./assets/icons/logoSCCI.png" type="image/png">
     <link rel="stylesheet" href="./assets/css/root.css" />
     <link rel="stylesheet" href="./assets/css/crew.css" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +23,10 @@ include './includes/config.php';
 </head>
 
 <body >
+<?php
+include './includes/nav.php';
+?>
+
 
     <section class="sectionBlock container">
         <h1 class="mainTitle" data-aos="zoom-in">President</h1>
@@ -71,8 +78,9 @@ include './includes/config.php';
                             <img src="./assets/img/crewFrontCard.png" loading="lazy">
                         </div>
                     </div>
+                     
                 </div>
-               
+               <a href="crewDetails.php" class="btn btnPrimary btnSm">Discover More</a>
 
                 <!-- Sub Cards Container -->
                 <div class="subCrewGrid hiddenGrid">
@@ -239,5 +247,8 @@ include './includes/config.php';
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/crew.js"></script>
 </body>
+<?php
+include './includes/footer.php';
+?>
 
 </html>

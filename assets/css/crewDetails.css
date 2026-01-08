@@ -82,40 +82,47 @@
 .paperScroll {
   position: relative;
   width: 100%;
-  max-width: 650px;
-  /* Wide enough for text */
-  height: 480px;
-
-  /* Image Path */
+  max-width: 700px; 
+  aspect-ratio: 1.5 / 1; 
   background-image: url('../img/paperHome.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;
-
+  padding: 10% 12%; 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; 
+  align-items: center;     
+  justify-content: center; 
+  box-sizing: border-box;
 }
 
 .paperContent {
-  width: 65%;
-  /* Constrain text inside paper margins */
+  width: 100%;
   text-align: center;
-  margin-top: -10px;
-  /* Slight adjustment */
+  max-height: 100%;
+  overflow-y: auto; 
+  overflow-x: auto;
+  scrollbar-width: none; 
 }
+/* .paperContent::-webkit-scrollbar {
+  display: none;
+} */
 
 .paperTitle {
-  font-size: var(--fs-2xl);
+  font-size: clamp(1.5rem, 4vw, 2.5rem); 
   color: var(--color-secondary);
   margin-bottom: var(--space-4);
+  font-family: "Irish Grover", cursive;
 }
 
 .paperText {
-  font-size: var(--fs-sm);
+  /* الخط يصغر في الشاشات الصغيرة */
+  font-size: clamp(0.9rem, 2vw, 1.1rem); 
   font-weight: var(--fw-bold);
-  color: var(--color-primary-dark);
-  line-height: var(--lh-loose);
+  color: var(--color-primary-dark); 
+  line-height: 1.6;
+  text-align: center; 
+  padding: 0 10px; 
 }
 
 /* ===== Members Grid Layout ===== */
@@ -232,31 +239,30 @@
   }
 
   .paperScroll {
-    width: 90%;
-    max-width: 320px;
-    height: auto;
-    min-height: 500px;
-    padding: var(--space-8) var(--space-3);
-    margin: 0 auto;
-    background-size: contain;
-    background-position: center;
-  }
+    width: 95%;
+    max-width: 400px;
+    aspect-ratio: unset; 
+    min-height: 450px; 
+    padding: 100px 40px; 
+  } 
+  
 
   .paperContent {
-    width: 75%;
-    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .paperTitle {
-    font-size: var(--fs-lg);
-    margin-bottom: var(--space-2);
+    margin-top: 0;
+    margin-bottom: 10px;
   }
-
+  
   .paperText {
-    font-size: 1.1rem;
+    font-size: 0.95rem; 
     line-height: 1.4;
   }
-
   .membersGrid {
     grid-template-columns: 1fr;
     gap: var(--space-6);
