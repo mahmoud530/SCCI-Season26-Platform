@@ -7,8 +7,9 @@
 
 /* home components */
 
+/* contact star */
 .form-content::before {
-  left: -10px !important;
+  left: -100% !important;
 }
 /* home buttons */
 .homeBtn {
@@ -30,6 +31,7 @@
 .homeTitles {
   padding: 0 5rem;
   margin: 7rem 0 4rem;
+  width: 100%;
 }
 
 .homeTitles h1 {
@@ -118,6 +120,19 @@
   z-index: 1;
 }
 
+.aboutContainer h1 {
+  margin-bottom: 0;
+}
+
+.aboutContainer hr {
+  margin: 0.6rem auto;
+}
+
+.aboutContainer p {
+  color: var(--color-gray-dark);
+  margin-bottom: 4rem;
+}
+
 /* cards */
 /*  workshop cards  */
 
@@ -166,10 +181,12 @@
 
 .backCard {
   transform: rotateY(180deg);
+  box-shadow: 0 0 20px 5px #ab202047;
+  border-radius: 40px;
 }
 
-.frontCard img,
-.backCard img {
+.backCard img,
+.frontCard img {
   width: 100%;
   height: 100%;
   border-radius: 40px;
@@ -194,14 +211,30 @@
 /* Explore Button */
 .cardContent {
   position: absolute;
-  bottom: 80px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
+  transform: translate(-50%, -50%);
+  width: 70%;
   text-align: center;
   opacity: 1;
   transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
+
+.cardLogo {
+  height: 20rem;
+  display: grid;
+}
+
+.cardContent img {
+  width: 70%;
+  margin: auto;
+}
+
 .cardText {
   color: var(--color-primary);
   font-size: var(--fs-xl);
@@ -213,7 +246,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  gap: 6rem;
   padding: 0 4rem;
 }
 
@@ -240,10 +273,19 @@
 }
 
 /* sponsors */
+.sponsors {
+  overflow: hidden;
+}
+
 .sponsorContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  width: max-content;
 }
+
 .sponsors {
   display: flex;
   flex-direction: column;
@@ -254,7 +296,7 @@
 
 .sponsor {
   position: relative;
-  width: 300px;
+  width: 200px;
 }
 
 .sponsorInfo {
@@ -266,18 +308,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 
 .sponsorInfo img {
-  width: 60px;
+  width: 52%;
 }
 
 .sponsorInfo p {
   margin-bottom: 0;
   color: var(--color-primary-dark);
-  font-size: 19px;
+  font-size: 17px;
   font-weight: bold;
-  line-height: 1.3;
+  line-height: 1.1;
 }
 
 .sponsorName {
@@ -330,7 +373,7 @@ select {
   font-size: var(--fs-sm);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.4);
   outline: none;
-  resize: both;
+  resize: none;
 }
 
 .input-group textarea::placeholder {
@@ -356,7 +399,6 @@ select {
   min-height: 14px;
 }
 
-
 @media (max-width: 1000px) {
   .contactUsContainer {
     justify-content: center;
@@ -368,6 +410,10 @@ select {
 }
 
 @media (max-width: 850px) {
+  .heroSection {
+    background: url(../img/heroResponsive.jpg);
+  }
+
   .aboutSection .aboutBGresponsive {
     display: inline-block;
     width: 100%;
@@ -406,7 +452,7 @@ select {
   }
 }
 
-@media (max-width: 486px) {
+@media (max-width: 520px) {
   .statContainer {
     justify-content: center;
   }
