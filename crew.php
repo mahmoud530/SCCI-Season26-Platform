@@ -72,7 +72,7 @@ include './includes/config.php';
                         </div>
                     </div>
                 </div>
-                <a href="" class="btn btnPrimary btnSm">Discover More</a>
+               
 
                 <!-- Sub Cards Container -->
                 <div class="subCrewGrid hiddenGrid">

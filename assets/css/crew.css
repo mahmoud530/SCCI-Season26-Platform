@@ -19,32 +19,65 @@
   margin-bottom: var(--space-10);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  
+  /* 1. ضبط الشبكة لتكون عمود واحد */
   .presidentGrid {
     grid-template-columns: 1fr;
-    gap: var(--space-4);
+    gap: 20px;
+    margin-bottom: 40px;
   }
 
-  .paperScroll {
-    width: 90%;
-    max-width: 320px;
-    min-height: 500px;
-    padding: var(--space-8) var(--space-3);
+  /* 2. ضبط الكارت */
+  .presidentGrid .flipCard {
+    max-width: 260px; /* تصغير الكارت قليلاً ليعطي مساحة للورقة */
     margin: 0 auto;
-    background-size: contain;
-    background-position: center;
   }
 
+  /* 3. ضبط خلفية الورقة (التعديل الجذري هنا) */
+  .paperScroll {
+    width: 95%; 
+    max-width: 400px;
+    margin: 0 auto;
+    
+    /* زيادة الـ Padding العلوي والسفلي بشكل كبير (130px)
+       لأن الصورة عندما تتمدد، تتمدد الحواف الخشبية وتغطي النص.
+       هذا الفراغ يضمن بقاء النص في المنتصف البيج فقط.
+    */
+    padding: 140px 25px 130px 25px; 
+    
+    height: auto; 
+    min-height: auto;
+    background-size: 100% 100%;
+  }
+
+  /* 4. حاوية النص */
   .paperContent {
-    width: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
+  /* 5. العنوان */
   .paperTitle {
-    font-size: var(--fs-lg);
-    margin-bottom: var(--space-2);
+    font-size: 1.4rem; /* تصغير العنوان */
+    margin-bottom: 8px;
+    margin-top: 0;
+    line-height: 1.1;
+  }
+
+  /* 6. النص (تصغيره ليقلل ارتفاع الورقة وبالتالي يقلل تشوه الخلفية) */
+  .paperScroll p.textPrimary {
+    font-size: 0.85rem; /* حجم صغير ومقروء */
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    width: 100%;
   }
 }
-
 /* ===== Paper Scroll Styling ===== */
 .paperScroll {
   position: relative;
@@ -84,6 +117,7 @@
     margin-inline: auto;
     gap: var(--space-10);
   }
+  
 }
 
 .boardItem {
