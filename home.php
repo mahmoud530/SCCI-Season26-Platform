@@ -27,12 +27,13 @@
     <!-- AOS library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>Home</title>
+    <title>SCCI | Home</title>
 </head>
 
 <body>
     <!-- Main Hero section -->
     <section class="heroSection">
+        <!-- <img src="./assets/img/heroBanner.jpg" alt="express" class="heroExpress" loading="lazy"> -->
         <div class="heroContainer">
             <h1>seek the peak</h1>
             <hr>
@@ -57,12 +58,17 @@
             </p>
             <a href="./about.php" class="submit-btn homeBtn">explore more</a>
         </div>
-        <img class="aboutBG" loading="lazy" src="./assets/img/paperHome.png" alt="">
-        <img class="aboutBGresponsive" loading="lazy" src="./assets/img/paperHomeResponsive.png" alt="">
+        <img class="aboutBG" loading="lazy" src="./assets/img/paperHome.png" alt="paperHome">
+        <img class="aboutBGresponsive" loading="lazy" src="./assets/img/paperHomeResponsive.png" alt="paperHomeResponsive">
     </section>
 
     <!-- Main Cards -->
     <section class="workshopsSection">
+        <div class="homeTitles">
+            <h1>Our Community</h1>
+            <hr>
+        </div>
+
         <div class="container">
             <div class="workshopCardsGrid">
                 <div class="cardsContainer aos-animate" data-aos="flip">
@@ -73,8 +79,10 @@
                         <div class="backCard">
                             <img src="assets/img/workshopCard.png" alt="Workshops" loading="lazy">
                             <div class="cardContent">
-                                <p class="cardText">OUR WORKSHOPS</p>
-                                <img src="assets/img/workShopsLogo.jpg" alt="Workshops">
+                                <p class="cardText">WORKSHOPS</p>
+                                <div class="cardLogo">
+                                    <img src="assets/img/workShopsLogo.png" alt="Workshops" loading="lazy">
+                                </div>
                                 <a href="workshops.php" class="btn btn-primary btn-sm">
                                     Explore More
                                 </a>
@@ -92,7 +100,9 @@
                             <img src="assets/img/workshopCard.png" alt="Crew" loading="lazy">
                             <div class="cardContent">
                                 <p class="cardText">OUR CREW</p>
-                                <img src="assets/img/workShopsLogo.jpg" alt="Crew">
+                                <div class="cardLogo">
+                                    <img src="./assets/img/crewCard.png" alt="Crew" loading="lazy">
+                                </div>
                                 <a href="crew.php" class="btn btn-primary btn-sm">
                                     Explore More
                                 </a>
@@ -119,25 +129,25 @@
         <div class="statContainer">
             <!-- stats container -->
             <div class="stat">
-                <img loading="lazy" src="./assets/img/stat-calender.png" alt="">
+                <img loading="lazy" src="./assets/img/stat-calender.png" alt="stat">
                 <h4 class="statNumber">21</h4>
                 <h4 class="statUnit">years</h4>
             </div>
 
             <div class="stat">
-                <img loading="lazy" src="./assets/img/stat-members.png" alt="">
+                <img loading="lazy" src="./assets/img/stat-members.png" alt="stat">
                 <h4 class="statNumber">300</h4>
                 <h4 class="statUnit">participants</h4>
             </div>
 
             <div class="stat">
-                <img loading="lazy" src="./assets/img/stat-participant.png" alt="">
+                <img loading="lazy" src="./assets/img/stat-participant.png" alt="stat">
                 <h4 class="statNumber">200</h4>
                 <h4 class="statUnit">members</h4>
             </div>
 
             <div class="stat">
-                <img loading="lazy" src="./assets/img/stat-session.png" alt="">
+                <img loading="lazy" src="./assets/img/stat-session.png" alt="stat">
                 <h4 class="statNumber">16</h4>
                 <h4 class="statUnit">sessions</h4>
             </div>
@@ -159,11 +169,11 @@
 
             <!-- sponsor card -->
             <div class="sponsor">
-                <img loading="lazy" src="./assets/img/sponsorBackground1.1.png" alt="">
+                <img loading="lazy" src="./assets/img/sponsorBackground1.1.png" alt="sponsor">
 
                 <div class="sponsorInfo">
                     <!-- sponsor logo -->
-                    <img src="./assets/./icons/logoSCCI.png" alt="" class="sponsorLogo">
+                    <img loading="lazy" src="./assets/./icons/logoSCCI.png" alt="sponsor" class="sponsorLogo">
 
                     <!-- sponsor name -->
                     <p>sponsor name</p>
@@ -172,11 +182,11 @@
 
             <!-- sponsor card -->
             <div class="sponsor">
-                <img loading="lazy" src="./assets/img/sponsorBackground1.1.png" alt="">
+                <img loading="lazy" src="./assets/img/sponsorBackground1.1.png" alt="sponsor">
 
                 <div class="sponsorInfo">
                     <!-- sponsor logo -->
-                    <img src="./assets/./icons/logoSCCI.png" alt="" class="sponsorLogo">
+                    <img loading="lazy" src="./assets/./icons/logoSCCI.png" alt="sponsor" class="sponsorLogo">
 
                     <!-- sponsor name -->
                     <p>sponsor name</p>
@@ -185,11 +195,11 @@
 
             <!-- sponsor card -->
             <div class="sponsor">
-                <img loading="lazy" src="./assets/img/sponsorBackground1.1.png" alt="">
+                <img loading="lazy" src="./assets/img/sponsorBackground1.1.png" alt="sponsor">
 
                 <div class="sponsorInfo">
                     <!-- sponsor logo -->
-                    <img src="./assets/./icons/logoSCCI.png" alt="" class="sponsorLogo">
+                    <img loading="lazy" src="./assets/./icons/logoSCCI.png" alt="sponsor" class="sponsorLogo">
 
                     <!-- sponsor name -->
                     <p>sponsor name</p>
@@ -218,17 +228,17 @@
                     or for any sponsorship deals, don't hesitate to contact us right here.
                 </div>
 
-                <img loading="lazy" src="./assets/img/paperContact.png" alt="">
+                <img loading="lazy" src="./assets/img/paperContact.png" alt="contactUs">
 
             </div>
 
             <form class="form-content" id="form" action="" method="POST" enctype="multipart/form-data">
-                <img class="homeBird" loading="lazy" src="./assets/img/bird.png" alt="">
+                <img class="homeBird" loading="lazy" src="./assets/img/bird.png" alt="bird">
 
 
                 <!-- inputs -->
                 <div class="input-group">
-                    <label for="">Full Name</label>
+                    <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your full name">
                     <small class="error"></small>
                 </div>
@@ -240,8 +250,14 @@
                 </div>
 
                 <div class="input-group">
+                    <label for="number">Number</label>
+                    <input type="text" id="number" name="number" placeholder="Enter your number">
+                    <small class="error"></small>
+                </div>
+
+                <div class="input-group">
                     <label for="message">Message</label>
-                    <textarea type="text" id="message" name="message" placeholder="Enter your message"></textarea>
+                    <textarea type="text" rows="5" id="message" name="message" placeholder="Enter your message"></textarea>
                     <small class="error"></small>
                 </div>
 
