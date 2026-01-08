@@ -19,4 +19,5 @@ x.addEventListener("click", () => {
 
 sideBtn.addEventListener("click", () => {
   console.log("clicked");
+
 });
