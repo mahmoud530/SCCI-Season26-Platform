@@ -1,49 +1,104 @@
-// Cards System JS Code
+// Crew Cards Slider with Front-Only Rotation (Correct Init)
 
-const cards = Array.from(document.querySelectorAll('.card'));
+const cards = Array.from(document.querySelectorAll('.crewCard'));
 const exitedStack = [];
-
-// Initialize cards stacked
-cards.forEach((card, index) => {
-    card.classList.add('active');
-    card.style.zIndex = index;
-});
 
 const nextBtn = document.getElementById('nextBtn');
 const prevBtn = document.getElementById('prevBtn');
 
-// RIGHT: slide out topmost card
+// Detect rotated cards by filename (-r)
+function shouldRotate(card) {
+    return /-r\.(png|jpg|jpeg|webp)$/i.test(card.src);
+}
+
+// Orientation helpers
+function setHorizontal(card) {
+    card.style.transform = 'translateX(0) rotate(0deg)';
+}
+
+function setVertical(card) {
+    card.style.transform = 'translateX(0) rotate(90deg)';
+}
+
+// ===============================
+// INITIALIZE
+// ===============================
+cards.forEach((card, index) => {
+    card.style.zIndex = index;
+    card.classList.add('active');
+    setHorizontal(card);
+});
+
+// ⭐ INITIAL FRONT FIX
+const initialFront = cards[cards.length - 1];
+if (shouldRotate(initialFront)) {
+    requestAnimationFrame(() => setVertical(initialFront));
+}
+
+/* =========================
+   RIGHT ARROW
+========================= */
 nextBtn.addEventListener('click', () => {
-    const visibleCards = cards.filter(c => c.classList.contains('active') && !c.classList.contains('hidden'));
-    
-    if (visibleCards.length <= 1) return; // last card stays
+    const visibleCards = cards.filter(
+        c => c.classList.contains('active') && !c.classList.contains('hidden')
+    );
+
+    if (visibleCards.length <= 1) return;
 
     const topCard = visibleCards[visibleCards.length - 1];
+    const newFront = visibleCards[visibleCards.length - 2];
+
+    // Rotate current front back to horizontal
+    setHorizontal(topCard);
 
     // Slide out
+    topCard.style.transform = 'translateX(120%) rotate(0deg)';
     topCard.classList.add('slide-right');
 
-    // After animation ends, hide
     topCard.addEventListener('transitionend', function handler() {
         topCard.classList.remove('active', 'slide-right');
         topCard.classList.add('hidden');
         exitedStack.push(topCard);
         topCard.removeEventListener('transitionend', handler);
     });
+
+    // Rotate new front if needed
+    if (shouldRotate(newFront)) {
+        requestAnimationFrame(() => setVertical(newFront));
+    }
 });
 
-// LEFT: slide back last hidden card
+/* =========================
+   LEFT ARROW
+========================= */
 prevBtn.addEventListener('click', () => {
     if (exitedStack.length === 0) return;
 
+    const visibleCards = cards.filter(
+        c => c.classList.contains('active') && !c.classList.contains('hidden')
+    );
+    const currentFront = visibleCards[visibleCards.length - 1];
+
+    // Rotate current front back to horizontal
+    setHorizontal(currentFront);
+
+    // Bring back previous card
     const card = exitedStack.pop();
-
     card.classList.remove('hidden');
-    card.classList.add('slide-back', 'active');
+    card.classList.add('active');
 
-    // Trigger reflow to animate
-    void card.offsetWidth;
+    // Start off-screen, horizontal
+    card.style.transform = 'translateX(120%) rotate(0deg)';
+    void card.offsetWidth; // force reflow
 
-    // Remove slide-back class to slide to normal position
-    card.classList.remove('slide-back');
+    // Slide in
+    card.style.transform = 'translateX(0) rotate(0deg)';
+
+    // Rotate to vertical ONLY when fully in front
+    card.addEventListener('transitionend', function handler() {
+        if (shouldRotate(card)) {
+            setVertical(card);
+        }
+        card.removeEventListener('transitionend', handler);
+    });
 });
