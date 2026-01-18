@@ -27,9 +27,7 @@
 </head>
 
 <body>
-  <!-- add materials section -->
-  <main class="materialPage">
-
+  <main class="memberWorkshopPanel">
     <!-- Add Task Section -->
     <section class="taskContainer">
         <h2 class="sectionTitle">Add Tasks</h2>
@@ -117,44 +115,55 @@
         </div>
       </div>
     </section>
+    <!-- end view task section-->
 
-    <!-- adding materials name -->
+       <!-- add materials section -->
     <section class="addMaterial">
       <h2 class="sectionTitle">Add Materials</h2>
+      <form id="validMaterialForm" action="" method="post">
       <div class="materialForm">
         <div class="formGroup">
-          <label class="formLabel">Material Name</label>
-          <input class="textInput" type="text" />
+    <!-- adding materials name -->
+          <label class="formLabel" for="materialName">Material Name</label>
+          <input class="textInput" type="text" id="materialName"name="materialName" />
+          <p id="materialNameMessage"></p>
         </div>
         <!-- Session Type Select -->
         <div class="formGroup">
-          <label class="formLabel">Session Type</label>
-          <select class="selectInput">
-            <option>Technical</option>
-            <option>Soft Skills</option>
+          <label class="formLabel" for="sessionType">Session Type</label>
+          <select class="selectInput"  id="sessionType" name="sessionType">
+            <option value="">Select Type</option>
+            <option value="Technical">Technical</option>
+            <option value="Soft Skills">Soft Skills</option>
           </select>
+          <p id="sessionTypeMessage"></p>
         </div>
       </div>
-    </section>
-    <!--end of add materials form section-->
-
-
+    
     <!--file upload section-->
-    <section class="fileUpload">
-
-      <div class="uploadContainer">
+    <div class="fileUpload" id="materialUpload">
+      <div class="uploadContainer" id="materialUploadContainer">
+        <label class="formLabel" for="materialFile">
         <div class="uploadIcon"></div>
-
-        <p class="uploadText">
+        </label>
+        <p class="uploadText"  id="materialFileState">
           Drag and drop or click to browse
         </p>
+        <p id="materialFileUploadedName"></p>
+        <label class="btn btn-secondary btn-sm" for="materialFile">Upload File</label>
+        <input type="file" name="materialFile" id="materialFile">
+            <p id="materialFileMessage"></p>
 
-        <button class="btn btn-secondary btn-sm">Upload File</button>
+        </div>
+        <!--end of file upload section-->
 
-      </div>
+        <div>
+          <button id="addMaterialBtn" class="btn btn-primary btn-sm" type="submit">Add Material</button>
+        </div>
+
+      </form>
     </section>
-    <!--end of file upload section-->
-
+    <!--end of add materials form section-->
 
     <!--materials list section-->
     <section class="materialList">
@@ -163,16 +172,13 @@
 
         <!-- material type -->
         <aside class="materialType">
-          <button class="materialTypeButton">
+          <button type="button" class="materialTypeButton">
             Technical Material
           </button>
-          <button class="materialTypeButton">
+          <button type="button" class="materialTypeButton">
             SoftSkills Material
           </button>
         </aside>
-
-
-
         <!-- materials items List -->
         <div class="materialItemsList">
           <article class="materialItem">
@@ -183,7 +189,6 @@
               </span>
             </div>
             <div class="materialActions">
-              <button class="editMaterialButton">Edit</button>
               <button class="deleteMaterialButton">Delete</button>
             </div>
           </article>
@@ -195,7 +200,6 @@
               </span>
             </div>
             <div class="materialActions">
-              <button class="editMaterialButton">Edit</button>
               <button class="deleteMaterialButton">Delete</button>
             </div>
           </article>
@@ -206,8 +210,6 @@
 
   </main>
   <!-- end add materials section-->
-
-
 
   <script src="assets/js/memberWorkshopPanel.js" defer></script>
 </body>

@@ -7,7 +7,7 @@
 
 
 /* Main Page Container */
-.materialPage {
+.memberWorkshopPanel {
     padding: var(--space-6) var(--space-8);
     max-width: 1400px;
     margin: 0 auto;
@@ -15,61 +15,69 @@
 }
 
 /* Add Task Section */
-.taskContainer{
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  margin: 0 auto;
-  
+.taskContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+
 }
 
-.sideInputs{
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  align-items: start;
-  padding-left: var(--space-8);
+.sideInputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    align-items: start;
+    padding-left: var(--space-8);
 }
+
 .groupInputs {
     align-items: center;
     gap: var(--space-3);
     flex: 1;
 }
-.descriptionContainer{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+
+.descriptionContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 
 }
+
 #descriptionLabel {
     vertical-align: top;
 }
-#descriptionInput{
-  width:50% ;
+
+#descriptionInput {
+    width: 50%;
 }
 
-#taskFile{
-  display: none;
-}
-#fileUploadedName{
-  background-color: var(--color-white);
-  width: 40%;
-  color: var(--color-gray-dark);
-  display: none;
+#taskFile,
+#materialFile {
+    display: none;
 }
 
-.viewTasks{
+#fileUploadedName {
+    background-color: var(--color-white);
+    width: 40%;
+    color: var(--color-gray-dark);
+    display: none;
+}
 
-  color: var(--color-black);
-  font-size: var(--fs-sm);
-  align-items: center;
-  gap: 10px;
-  font-family: 'Inter', sans-serif;
-  /* Cleaner font for file names usually */
+.viewTasks {
+
+    color: var(--color-black);
+    font-size: var(--fs-sm);
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    /* Cleaner font for file names usually */
 
 }
-#materialTypeButton{
+
+.materialTypeButton,
+#materialTypeButton {
     display: flex;
     align-items: center;
     gap: var(--space-2);
@@ -92,6 +100,8 @@
     max-width: 1000px;
     margin: 10% auto;
 }
+
+.materialItem,
 #materialItem {
     background-color: #d1d1d1;
     /* Gray stripe */
@@ -104,46 +114,58 @@
 
 
 @media (max-width: 1000px) {
-  .taskContainer{
-    width: 90%;
-    margin: 20% auto;
-  }
-  .sideInputs{
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    padding-left: 0;
-  }
-  .groupInputs {
+    .taskContainer {
+        width: 90%;
+        margin: 20% auto;
+    }
+
+    .sideInputs {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .groupInputs {
         width: 100%;
         flex-direction: column;
         /* Stack label and input */
         align-items: flex-start;
         text-align: start;
         gap: 0.5rem;
-  }
-  .descriptionContainer{
-    flex-direction: column;
-    width: 100%;
-  }
-  #descriptionInput{
-    width:100% ;
-  }
+    }
+
+    .descriptionContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #descriptionInput {
+        width: 100%;
+    }
 
 }
 
-@media (max-width: 620px){
-  .sideInputs{
-    flex-direction: column;
-    padding-left: 0;
-  }
+@media (max-width: 620px) {
+    .sideInputs {
+        flex-direction: column;
+        padding-left: 0;
+    }
 }
 
 /* ================================
    ADD MATERIALS SECTION
 ===================================*/
 .addMaterial {
-    margin-bottom: var(--space-8);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto var(--space-8);
+}
+
+#addMaterialBtn {
+    margin-top: 5rem;
 }
 
 .sectionTitle {
@@ -157,13 +179,11 @@
 /* The layout for Material Name | Session Type */
 .materialForm {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
     background-color: var(--color-white-neutral);
-    /* Slight off-white/cream */
     padding: var(--space-3) var(--space-6);
     border-radius: 50px;
-    /* Pill shape */
     box-shadow: var(--shadow-light);
     border: 1px solid var(--border-light);
     width: 100%;
@@ -214,13 +234,18 @@
     /* Give input slightly more space */
 }
 
+@media (max-width: 1000px) {
+    .addMaterial {
+        width: 90%;
+    }
+}
+
+
 /* ================================
    FILE UPLOAD SECTION
 ===================================*/
 .fileUpload {
     margin-bottom: var(--space-8);
-    /* border: 3px solid #3498db; */
-    /* Specific light blue from design */
     border-radius: 20px;
     padding: var(--space-4);
     background-color: transparent;
@@ -229,19 +254,18 @@
 }
 
 .uploadContainer {
-    background-color: var(--color-white-neutral); 
-    border: 2px dashed var(--color-secondary);
-    /* Light peach/tan background */
-    border-radius: 16px;
+    background-color: var(--color-white-neutral);
+    border: 3px dashed var(--color-secondary);
+    border-radius: 20px;
     padding: var(--space-8);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--space-3);
+    gap: var(--space-4);
     text-align: center;
-    min-height: 300px;
-    /* Force some height */
+    min-height: 350px;
+    position: relative;
 }
 
 .uploadIcon {
@@ -254,13 +278,18 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: var(--space-2);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-/* Using FontAwesome unicode for download symbol if not provided in HTML */
+.uploadIcon:hover {
+    transform: scale(1.1);
+}
+
+/* Using FontAwesome unicode for download symbol */
 .uploadIcon::before {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -272,31 +301,39 @@
     color: #8d6e63;
     /* Brownish text color */
     font-size: var(--fs-lg);
+    font-weight: 700;
     line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    max-width: 80%;
 }
 
 .uploadText small {
     display: block;
     font-size: var(--fs-sm);
     opacity: 0.8;
+    text-transform: none;
+    font-family: 'Inter', sans-serif;
+    margin-top: 5px;
 }
 
 /* The Upload Button */
 .uploadContainer .btn {
     position: relative;
     margin-top: var(--space-4);
-    /* background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-dark)); */
+    background-color: var(--color-secondary-dark);
     color: var(--color-white);
-    padding: 12px 50px;
-    border-radius: 20px;
+    padding: 14px 40px;
+    border-radius: 50px;
     border: none;
-    font-family: inherit;
-    font-size: var(--fs-base);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    font-family: "Stencil", "Cinzel", serif;
+    font-size: var(--fs-lg);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    /* Removed gap since we are using absolute positioned stars */
 }
 
 /* Floating Stars on both sides (Replicating/Enforcing Root Style) */
@@ -385,10 +422,6 @@
 
 }
 
-/* First button specific adjustments removed in favor of .active class logic */
-/* But we keep the icon logic */
-
-
 /* Icons for buttons */
 .materialTypeButton::before {
     font-family: "Font Awesome 6 Free";
@@ -444,7 +477,6 @@
     align-items: center;
     gap: 10px;
     font-family: 'Inter', sans-serif;
-    /* Cleaner font for file names usually */
 }
 
 /* File Icon */
@@ -452,7 +484,6 @@
     display: inline-block;
     font-family: "Font Awesome 6 Free";
     font-weight: 400;
-    /* Regular style */
     content: "\f15b";
     /* fa-file */
     font-size: 1.2em;
@@ -464,7 +495,7 @@
     gap: var(--space-4);
 }
 
-.editMaterialButton,
+
 .deleteMaterialButton {
     background: transparent;
     border: none;
@@ -476,20 +507,6 @@
     align-items: center;
     gap: 6px;
     transition: opacity 0.2s;
-}
-
-.editMaterialButton {
-    color: var(--color-black);
-}
-
-.editMaterialButton::before {
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    content: "\f044";
-    /* fa-edit */
-}
-
-.deleteMaterialButton {
     color: var(--color-primary);
 }
 
@@ -500,23 +517,11 @@
     /* fa-trash-alt */
 }
 
-.editMaterialButton:hover,
 .deleteMaterialButton:hover {
     opacity: 0.7;
     transform: scale(1.1);
 }
 
-/* Ensure Icons appear correctly */
-.editMaterialButton::before,
-.deleteMaterialButton::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* MEDIA QUERIES for responsiveness */
 /* MEDIA QUERIES for responsiveness */
 @media (max-width: 850px) {
     .materialForm {
@@ -562,29 +567,29 @@
         /* Scrollbar space */
     }
 
-    .materialTypeButton {
-        flex: 1;
-        justify-content: center;
-        white-space: nowrap;
-    }
+    .materialTypeButton,
     #materialTypeButton {
         flex: 1;
         justify-content: center;
         white-space: nowrap;
     }
+
     .uploadContainer {
-      padding: var(--space-5);
+        padding: var(--space-5);
         min-height: 200px;
     }
-    #uploadText{
+
+    #uploadText {
         font-size: var(--fs-sm);
-            /* margin: 0 auto var(--space-4); */
+        margin: 0 auto var(--space-4);
     }
+
     .fileUpload {
-        margin: 0 auto var(--space-4); 
+        margin: 0 auto var(--space-4);
     }
-    #submitBtn{
-      height: 40px !important;
+
+    #submitBtn {
+        height: 40px !important;
     }
 }
 
@@ -593,17 +598,13 @@
         padding: var(--space-4);
     }
 
-    .materialItem {
-        flex-direction: column;
-        gap: var(--space-3);
-        align-items: flex-start;
-    }
-
+    .materialItem,
     #materialItem {
         flex-direction: column;
         gap: var(--space-3);
         align-items: flex-start;
     }
+
     .materialActions {
         width: 100%;
         justify-content: flex-end;
