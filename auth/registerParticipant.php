@@ -83,15 +83,19 @@ $run_w = mysqli_query($connect, $select_w);
 <body>
 
     <div class="mainContent">
+
+        <!-- ================= Register Form ================= -->
         <form class="formContent" id="form" action="" method="POST" enctype="multipart/form-data" novalidate>
 
             <h1 class="registerTitle">Register</h1>
+
+            <!-- ===== Decorative Divider ===== -->
             <div class="divider">
                 <span class="line"></span>
                 <span class="diamond"></span>
                 <span class="line"></span>
             </div>
-
+            <!-- ===== Inputs ===== -->
             <div class="inputGroup">
                 <label>Full Name</label>
                 <input type="text" name="name" id="name" placeholder="e.g. John Doe" required>
@@ -112,13 +116,13 @@ $run_w = mysqli_query($connect, $select_w);
 
             <div class="inputGroup">
                 <label>Password</label>
-                    <input type="password" id="password" name="new-password" placeholder="••••••••">
+                <input type="password" id="password" name="new-password" placeholder="••••••••">
                 <div class="errorText" id="errorPassword"></div>
             </div>
 
             <div class="inputGroup">
                 <label>Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="new-password" placeholder="••••••••">
+                <input type="password" id="confirmPassword" name="new-password" placeholder="••••••••">
                 <div class="errorText" id="errorConfirmPassword"></div>
             </div>
 
