@@ -22,41 +22,19 @@
     <link rel="stylesheet" href="assets/css/navbar.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/memberWorkshopPanel.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="assets/css/feedbackModal.css?v=<?php echo time(); ?>">
     <!-- Custom Page Styles -->
 
     <title>SCCI-Panel</title>
 </head>
 
 <body>
-    <!-- REVIEW Popup ----------------------------------------------------------------------------- -->
-    <div id="feedbackPopup1" class="reviewFeedbackPopup">
-        <div class="reviewFeedbackContainer">
-            <div class="FeedbackContainerTop">
-                <h6>Feedback Review</h6>
-                <div class="closeFeedback">X</div>
-            </div>
-
-            <div class="FeedbackBox">
-                <h6>Omar Raslan . IT</h6>
-                <div class="feedbackRatePopup">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis corrupti repellendus quaerat,
-                        animi deleniti hic consequuntur accusantium. Rem doloremque vero reiciendis voluptate nobis 
-                        quasi temporibus error veritatis, atque tenetur repudiandae hic ab voluptatem recusandae nesciunt. 
-                        Assumenda magnam, neque illum, suscipit laborum cum eos enim expedita quo consectetur esse harum amet 
-                        quis cupiditate deleniti impedit quasi quia.</p>
-            </div>
-
-        </div>
-    </div>
-    
-
+    <!-- add materials section -->
     <main class="materialPage">
 
         <!-- panel ----------------------------------------------------------------- -->
         <div class="miniNav">
-            <div class="panelSvg panelSvgNav">
+            <div class="panelSvg">
                 <!-- left edge -->
                 <svg
                     shape-rendering="geometricPrecision"
@@ -130,856 +108,836 @@
             <a data-page="addTask" class="">add task</a>
             <a data-page="addMaterial" class="">add materials</a>
             <a data-page="quiz" class="">quiz</a>
-        </div>        
+        </div>
 
         <!-- EVALUATE --------------------------------------------------------------------------- -->
         <section
             id="evaluate"
             class="panelSection panelSectionActive evaluateContainer">
-
-            <!-- Sessions -->
-            <div class="sessionsSelectorFrame">
-                <button class="sessionScrollBtn scrollLeft">
-                    <div class="sessionBtnLeft">
-                        
-
-                        <i class="fa-solid fa-angle-left"></i>
-                    </div>
-                </button>
-                
-                <div class="sessionsSelector">
-                    
-                    <!-- Active Session -->
-                    <div class="sessionBtn sessionActive">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="#1f184e"
-                                    stroke="#1f184e"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionBlue"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="#1f184e"
-                                    stroke="#1f184e"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 1</p>
-                    </div>
-                    
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 2</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 3</p>
-                    </div>
-
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 4</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 5</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 6</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 7</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 8</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 9</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 10</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 11</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 12</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 13</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 14</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 15</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 16</p>
-                    </div>
-                
-                </div>
-                
-                <!-- scroll button -->
-                <button class="sessionScrollBtn scrollRight">
-                    <div class="sessionBtnLeft">
-                        <!-- svg shape -->
-                        
-
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
-                </button>
-            </div>
+            <h4>dashboard</h4>
 
             <div class="panelWhiteBox">
+                <!-- Sessions -->
+                <div class="sessionsSelectorFrame">
+                    <div class="sessionsSelector">
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 1</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 2</p>
+                        </div>
+
+                        <!-- Active Session -->
+                        <div class="sessionBtn sessionActive">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="#1f184e"
+                                        stroke="#1f184e"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionBlue"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="#1f184e"
+                                        stroke="#1f184e"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 3</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 4</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 5</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 6</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 7</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 8</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 9</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 10</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 11</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 12</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 13</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 14</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 15</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 16</p>
+                        </div>
+                    </div>
+                </div>
+            
                 <!-- Table -->
                 <div class="tableScrollFrame">
                     <div class="tableScroll">
@@ -1036,9 +994,9 @@
                                     </td>
                                     <td>
                                         <button
-                                            data-popup="feedbackModal"
-                                            class="btn evaluateFeedback btn-primary"
-                                            type="submit">
+                                            class="btn evaluateFeedback btn-primary addFeedbackBtn"
+                                            type="button"
+                                            onclick="openFeedbackModal('Omar Raslan', '1')">
                                             Add Feedback
                                         </button>
                                     </td>
@@ -1070,7 +1028,6 @@
                                     </td>
                                     <td>
                                         <button
-                                            data-popup="feedbackModal"
                                             class="btn evaluateFeedback btn-primary"
                                             type="submit">
                                             Add Feedback
@@ -1104,7 +1061,6 @@
                                     </td>
                                     <td>
                                         <button
-                                            data-popup="feedbackModal"
                                             class="btn evaluateFeedback btn-primary"
                                             type="submit">
                                             Add Feedback
@@ -1138,7 +1094,6 @@
                                     </td>
                                     <td>
                                         <button
-                                            data-popup="feedbackModal"
                                             class="btn evaluateFeedback btn-primary"
                                             type="submit">
                                             Add Feedback
@@ -1150,856 +1105,836 @@
                     </div>
                 </div>
             </div>
+
         </section>
 
 
-
         <!-- REVIEW ----------------------------------------------------------------------------- -->
-        <section id="review" class="panelSection evaluateContainer">            
+        <section id="review" class="panelSection evaluateContainer">
+            <h4>dashboard</h4>
 
-            <!-- Sessions -->
-            <div class="sessionsSelectorFrame">
-                <button class="sessionScrollBtn scrollLeft">
-                    <div class="sessionBtnLeft">
-                        
+            <div>
+                <!-- Sessions -->
+                <div class="sessionsSelectorFrame">
+                    <div class="sessionsSelector">
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                        <i class="fa-solid fa-angle-left"></i>
-                    </div>
-                </button>
-                
-                <div class="sessionsSelector">
-                    
-                    <!-- Active Session -->
-                    <div class="sessionBtn sessionActive">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="#1f184e"
-                                    stroke="#1f184e"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionBlue"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="#1f184e"
-                                    stroke="#1f184e"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 1</p>
                         </div>
 
-                        <p>session 1</p>
-                    </div>
-                    
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                            <!-- center -->
+                                <!-- center -->
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 2</p>
                         </div>
 
-                        <p>session 2</p>
-                    </div>
+                        <!-- Active Session -->
+                        <div class="sessionBtn sessionActive">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="#1f184e"
+                                        stroke="#1f184e"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionBlue"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="#1f184e"
+                                        stroke="#1f184e"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 3</p>
                         </div>
 
-                        <p>session 3</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
+                                <!-- center -->
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 4</p>
                         </div>
 
-                        <p>session 4</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 5</p>
                         </div>
 
-                        <p>session 5</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 6</p>
                         </div>
 
-                        <p>session 6</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 7</p>
                         </div>
 
-                        <p>session 7</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 8</p>
                         </div>
 
-                        <p>session 8</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 9</p>
                         </div>
 
-                        <p>session 9</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 10</p>
                         </div>
 
-                        <p>session 10</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 11</p>
                         </div>
 
-                        <p>session 11</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 12</p>
                         </div>
 
-                        <p>session 12</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 13</p>
                         </div>
 
-                        <p>session 13</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 14</p>
                         </div>
 
-                        <p>session 14</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 15</p>
                         </div>
 
-                        <p>session 15</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 16</p>
                         </div>
-
-                        <p>session 16</p>
                     </div>
-                
                 </div>
-                
-                <!-- scroll button -->
-                <button class="sessionScrollBtn scrollRight">
-                    <div class="sessionBtnLeft">
-                        <!-- svg shape -->
-                        
 
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
-                </button>
-            </div>
-
-            <div class="panelWhiteBox">    
                 <!-- Table -->
                 <div class="tableScrollFrame">
                     <div class="tableScroll">
@@ -2008,10 +1943,11 @@
                             cellspacing="0"
                             summary="participants dashboard">
                             <colgroup>
-                                <col span="1" style="width: 25%" />
-                                <col span="1" style="width: 25%" />
-                                <col span="1" style="width: 25%" />
-                                <col span="1" style="width: 25%" />
+                                <col span="1" style="width: 20%" />
+                                <col span="1" style="width: 20%" />
+                                <col span="1" style="width: 20%" />
+                                <col span="1" style="width: 20%" />
+                                <col span="1" style="width: 20%" />
                             </colgroup>
 
                             <!-- Table head -->
@@ -2020,11 +1956,12 @@
                                     <th scope="col"><i class="fa-solid fa-user"></i> Name</th>
                                     <th scope="col"><i class="fa-solid fa-user"></i> attendance</th>
                                     <th scope="col">
-                                        <i class="fa-solid fa-bars-progress"></i> task status
+                                        <i class="fa-solid fa-splotch"></i> task rating
                                     </th>
                                     <th scope="col">
                                         <i class="fa-solid fa-splotch"></i> feedback
                                     </th>
+                                    <th scope="col"><i class="fa-solid fa-plus"></i> added by</th>
                                 </tr>
                             </thead>
 
@@ -2037,48 +1974,6 @@
                                     <td>
                                         <!-- absent -->
                                         <div class="reviewAbsent">
-                                            <i class="fa-solid fa-user-xmark"></i>
-                                            <div>absent</div>
-                                        </div>
-                                    </td>
-
-                                    <td>
-                                        <!-- task bending -->
-                                        <div class="reviewBending">
-                                            <div class="reviewAttendBox">
-                                                <div class="reviewAttendedLeft"></div>
-                                                <div class="reviewAttendedSymbol">-</div>
-                                            </div>
-                                            <div>bending</div>
-                                        </div>
-                                    </td>
-
-                                    <td>
-                                        <button
-                                            data-popup="feedbackPopup1"
-                                            class="btn evaluateFeedback btn-primary"
-                                            type="submit">
-                                            view feedback
-                                        </button>
-                                    </td>
-
-                                </tr>
-                                
-                                <!-- table row -->
-                                <tr>
-                                    <td class="tableParticipantName">omar raslan</td>
-
-                                    <td>
-                                        <!-- absent -->
-                                        <div class="reviewAbsent">
-                                            <i class="fa-solid fa-user-xmark"></i>
-                                            <div>absent</div>
-                                        </div>
-                                    </td>
-
-                                    <td>
-                                        <!-- task rejected -->
-                                        <div class="reviewAbsent">
                                             <div class="reviewAttendBox">
                                                 <div class="reviewAttendedLeft"></div>
                                                 <div class="reviewAttendedSymbol">X</div>
@@ -2088,14 +1983,21 @@
                                     </td>
 
                                     <td>
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </td>
+
+                                    <td>
                                         <button
-                                            data-popup="feedbackPopup1"
                                             class="btn evaluateFeedback btn-primary"
                                             type="submit">
                                             view feedback
                                         </button>
                                     </td>
 
+                                    <td>
+                                        <!-- added by -->
+                                        <p class="reviewAddedBy">omar raslan</p>
+                                    </td>
                                 </tr>
                                 
                                 <!-- table row -->
@@ -2103,32 +2005,29 @@
                                     <td class="tableParticipantName">omar raslan</td>
 
                                     <td>
-                                        <!-- attended -->
-                                        <div class="reviewAttended">
-                                            <i class="fa-solid fa-user-check"></i>
-                                            <div>attended</div>
-                                        </div>
-                                    </td>
-
-                                    <td>
-                                        <!-- task approved -->
                                         <div class="reviewAttended">
                                             <div class="reviewAttendBox">
                                                 <div class="reviewAttendedLeft"></div>
                                                 <i class="fa-solid fa-check reviewAttendedSymbol"></i>
                                             </div>
-                                            <div>Approved</div>
+                                            <div>attended</div>
                                         </div>
+                                    </td>
 
+                                    <td>
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
                                     </td>
 
                                     <td>
                                         <button
-                                            data-popup="feedbackPopup1"
                                             class="btn evaluateFeedback btn-primary"
                                             type="submit">
                                             view Feedback
                                         </button>
+                                    </td>
+                                    <td>
+                                        <!-- added by -->
+                                        <p class="reviewAddedBy">omar raslan</p>
                                     </td>
                                 </tr>
 
@@ -2142,912 +2041,887 @@
 
         <!-- Add Task Section ------------------------------------- -->
         <section id="addTask" class="taskContainer panelSection evaluateContainer">
-            <!-- Sessions -->
-            <div class="sessionsSelectorFrame">
-                <button class="sessionScrollBtn scrollLeft">
-                    <div class="sessionBtnLeft">
-                        
-
-                        <i class="fa-solid fa-angle-left"></i>
-                    </div>
-                </button>
-                
-                <div class="sessionsSelector">
-                    
-                    <!-- Active Session -->
-                    <div class="sessionBtn sessionActive">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="#1f184e"
-                                    stroke="#1f184e"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionBlue"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="#1f184e"
-                                    stroke="#1f184e"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 1</p>
-                    </div>
-                    
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 2</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 3</p>
-                    </div>
-
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 4</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 5</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 6</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 7</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 8</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 9</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 10</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 11</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 12</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 13</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 14</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 15</p>
-                    </div>
-
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </div>
-
-                        <p>session 16</p>
-                    </div>
-                
-                </div>
-                
-                <!-- scroll button -->
-                <button class="sessionScrollBtn scrollRight">
-                    <div class="sessionBtnLeft">
-                        <!-- svg shape -->
-                        
-
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
-                </button>
-            </div>
-            
+            <h4>Add Tasks</h4>
             <div class="panelWhiteBox">
+                <!-- Sessions -->
+                <div class="sessionsSelectorFrame">
+                    <div class="sessionsSelector">
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 1</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 2</p>
+                        </div>
+
+                        <!-- Active Session -->
+                        <div class="sessionBtn sessionActive">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="#1f184e"
+                                        stroke="#1f184e"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionBlue"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="#1f184e"
+                                        stroke="#1f184e"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 3</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 4</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 5</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 6</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 7</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 8</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 9</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 10</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 11</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 12</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 13</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 14</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 15</p>
+                        </div>
+
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+
+                                <!-- center -->
+
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 16</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!-- add task section -->
+            <div>
                 <form id="validForm" action="" method="post">
                     <div class="materialForm">
                         <div class="sideInputs">
                             <!-- add task name -->
-                            <div class="inputsBox">
-                                <div class="groupInputs">
-                                     <label class="formLabel" for="taskName">Task Name:</label>
-                                     <input class="textInput" type="text" name="taskName" id="taskName">
-                                </div>
+                            <div class="groupInputs">
+                                <label class="formLabel" for="taskName">Task Name:</label>
+                                <input class="textInput" type="text" name="taskName" id="taskName">
                                 <p id="taskNameMessage"></p>
                             </div>
-
                             <!-- add task deadline -->
-                            <div class="inputsBox">
-                                <div class="groupInputs">
-                                     <label class="formLabel" for="dueDate">Deadline:</label>
-                                    <input class="textInput" type="datetime-local" name="dueDate" id="dueDate">
-                                </div>
+                            <div class="groupInputs">
+                                <label class="formLabel" for="dueDate">Deadline:</label>
+                                <input class="textInput" type="datetime-local" name="dueDate" id="dueDate">
                                 <p id="dueDateMessage"></p>
                             </div>
-                            
                         </div>
                         <!-- add task Description -->
-                        <div class="inputsBox">
-                            <div class="groupInputs">
-                                <label class="formLabel" for="description" id="descriptionLabel">Task Description:</label>
-                                <textarea class="textInput" name="description" id="descriptionInput" rows="5"></textarea>
-                            </div>
+                        <div class="groupInputs">
+                            <label class="formLabel" for="description" id="descriptionLabel">Task Description:</label>
+                            <textarea class="textInput" name="description" id="descriptionInput" rows="5"></textarea>
                             <p id="descriptionMessage"></p>
                         </div>
 
                     </div>
 
                     <!-- upload task file -->
-                    <div class="fileUpload">
-                        <div class="formLabel">Upload File:</div>
-                        <div class="uploadContainer">
-                            <label class="formLabel uploadLabel">
+                    <div class="fileUpload" id="taskUpload">
+                        <div class="uploadContainer" id ="taskUploadContainer">
+                            <label class="formLabel" for="taskFile">
                                 <div class="uploadIcon"></div>
-                                <p class="uploadText">Drag and drop or click to browse</p>
                             </label>
-
-                            <input type="file" name="taskFile" class="taskFileInput" style="display:none;">
-
-                            <!-- Shows uploaded file name -->
-                            <p class="fileUploadedName" style="display:none;"></p>
-                            <p class="fileMessage"></p>
-
-                            <label class="btn btn-secondary btn-sm" id="uploadBtn">Upload File</label>
+                            
+                            <p class="uploadText" id="fileUploadState">
+                            Drag and drop or click to browse
+                            </p>
+                            <p id="fileUploadedName"></p>
+                            <label  class=" btn btn-secondary btn-sm" for="taskFile">Upload File</label>
+                            <input  type="file" name="taskFile" id="taskFile">
+                            
+                            <p id="fileMessage"></p>
                         </div>
                     </div>
-
 
                     <button id="submitBtn" class="btn btn-primary btn-sm" type="submit">Add Task</button>
                 </form>
             </div>
-                        
+            
+            <!-- <div class="taskSeparator"></div> -->
+            
             <!--task list section ----------------------------- -->
+            <!-- materials items List -->
             <div class="panelWhiteBox">
                 <h4>Tasks</h4>
+                <!-- <div class="materialItemsList"> -->
 
                 <div class="articleFiles">
-                    <!-- uploaded task -->
                     <article class="materialItem">
 
                         <div class="materialInfo">
@@ -3061,902 +2935,883 @@
                     </article>
                 </div>
 
+                <!-- </div> -->
             </div>
         </section>
         
         
         <!-- adding materials section ---------------------------------- -->
-        <section class="evaluateContainer panelSection" id="addMaterial">
+        <section class="evaluateContainer panelSection" class="addMaterial" id="addMaterial">
+            <h4>Add Materials</h4>
 
-            <!-- Sessions -->
-            <div class="sessionsSelectorFrame">
-                <button class="sessionScrollBtn scrollLeft">
-                    <div class="sessionBtnLeft">
-                        
+            <div class="panelWhiteBox">
+                <!-- Sessions -->
+                <div class="sessionsSelectorFrame">
+                    <div class="sessionsSelector">
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                        <i class="fa-solid fa-angle-left"></i>
-                    </div>
-                </button>
-                
-                <div class="sessionsSelector">
-                    
-                    <!-- Active Session -->
-                    <div class="sessionBtn sessionActive">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="#1f184e"
-                                    stroke="#1f184e"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionBlue"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="#1f184e"
-                                    stroke="#1f184e"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 1</p>
                         </div>
 
-                        <p>session 1</p>
-                    </div>
-                    
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                            <!-- center -->
+                                <!-- center -->
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+
+                            <p>session 2</p>
                         </div>
 
-                        <p>session 2</p>
-                    </div>
+                        <!-- Active Session -->
+                        <div class="sessionBtn sessionActive">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="#1f184e"
+                                        stroke="#1f184e"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionBlue"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="#1f184e"
+                                        stroke="#1f184e"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                    C10 0 20 20 40 50
-                                    C20 80 10 100 0 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 3</p>
                         </div>
 
-                        <p>session 3</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
+                                <!-- center -->
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <!-- center -->
-
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 4</p>
                         </div>
 
-                        <p>session 4</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 5</p>
                         </div>
 
-                        <p>session 5</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 6</p>
                         </div>
 
-                        <p>session 6</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 7</p>
                         </div>
 
-                        <p>session 7</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 8</p>
                         </div>
 
-                        <p>session 8</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 9</p>
                         </div>
 
-                        <p>session 9</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 10</p>
                         </div>
 
-                        <p>session 10</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 11</p>
                         </div>
 
-                        <p>session 11</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 12</p>
                         </div>
 
-                        <p>session 12</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 13</p>
                         </div>
 
-                        <p>session 13</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 14</p>
                         </div>
 
-                        <p>session 14</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 15</p>
                         </div>
 
-                        <p>session 15</p>
-                    </div>
+                        <!-- Not Active Session -->
+                        <div class="sessionBtn">
+                            <!-- svg shape -->
+                            <div class="panelSvg panelSession">
+                                <!-- left edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M50 0
+                    C40 0 30 20 10 50
+                    C30 80 40 100 50 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
 
-                    <!-- Not Active Session -->
-                    <div class="sessionBtn">
-                        <!-- svg shape -->
-                        <div class="panelSvg panelSession">
-                            <!-- left edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M50 0
-                                    C40 0 30 20 10 50
-                                    C30 80 40 100 50 100
-                                    Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                                <!-- center -->
 
-                            <!-- center -->
+                                <div class="panelBody sessionWhite"></div>
+                                <!-- right edge -->
+                                <svg
+                                    shape-rendering="geometricPrecision"
+                                    class="panelEdge sessionEdge"
+                                    preserveAspectRatio="none"
+                                    viewBox="0 0 50 100"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M0 0
+                    C10 0 20 20 40 50
+                    C20 80 10 100 0 100
+                    Z"
+                                        fill="var(--color-white-gradient)"
+                                        stroke="var(--color-white-gradient)"
+                                        stroke-width="2"
+                                        stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
 
-                            <div class="panelBody sessionWhite"></div>
-                            <!-- right edge -->
-                            <svg
-                                shape-rendering="geometricPrecision"
-                                class="panelEdge sessionEdge"
-                                preserveAspectRatio="none"
-                                viewBox="0 0 50 100"
-                                xmlns="http://www.w3.org/2000/svg"
-                                aria-hidden="true">
-                                <path
-                                    d="M0 0
-                                        C10 0 20 20 40 50
-                                        C20 80 10 100 0 100
-                                        Z"
-                                    fill="var(--color-white-gradient)"
-                                    stroke="var(--color-white-gradient)"
-                                    stroke-width="2"
-                                    stroke-linejoin="round"
-                                    stroke-linecap="round" />
-                            </svg>
+                            <p>session 16</p>
                         </div>
-
-                        <p>session 16</p>
                     </div>
-                
                 </div>
-                
-                <!-- scroll button -->
-                <button class="sessionScrollBtn scrollRight">
-                    <div class="sessionBtnLeft">
-                        <!-- svg shape -->
-                        
-
-                        <i class="fa-solid fa-angle-right"></i>
-                    </div>
-                </button>
             </div>
             
-            <div class="panelWhiteBox">
-                <form id="validForm" action="" method="post">
-                    <div class="sideInputs">
-
-                        <div class="inputsBox">
-                            <div class="formGroup">
-                                <label class="formLabel">Material Name</label>
-                                <input class="textInput" type="text" />
-                            </div>
-                            <p id="taskNameMessage"></p>
-                        </div>
-
-                        <!-- Session Type Select -->
-                        <div class="inputsBox">
-
-                             <div class="formGroup">
-                                <label class="formLabel">Session Type</label>
-                                <select class="selectInput">
-                                    <option>Technical</option>
-                                    <option>Soft Skills</option>
-                                </select>
-                            </div>
-                        </div>
+            <div>
+                <form id="validMaterialForm" action="" method="post">
+                  <div class="materialForm">
+                    <div class="formGroup">
+                <!-- adding materials name -->
+                      <label class="formLabel" for="materialName">Material Name</label>
+                      <input class="textInput" type="text" id="materialName"name="materialName" />
+                      <p id="materialNameMessage"></p>
                     </div>
-    
-                    <!-- upload material file -->
-                    <div class="fileUpload">
-                        <div class="formLabel">Upload File:</div>
-                        <div class="uploadContainer">
-                            <label class="formLabel uploadLabel">
-                                <div class="uploadIcon"></div>
-                                <p class="uploadText">Drag and drop or click to browse</p>
-                            </label>
-
-                            <input type="file" name="taskFile" class="taskFileInput" style="display:none;">
-
-                            <!-- Shows uploaded file name -->
-                            <p class="fileUploadedName" style="display:none;"></p>
-                            <p class="fileMessage"></p>
-
-                            <label class="btn btn-secondary btn-sm" id="uploadBtn">Upload File</label>
-                        </div>
+                    <!-- Session Type Select -->
+                    <div class="formGroup">
+                      <label class="formLabel" for="sessionType">Session Type</label>
+                      <select class="selectInput"  id="sessionType" name="sessionType">
+                        <option value="">Select Type</option>
+                        <option value="Technical">Technical</option>
+                        <option value="Soft Skills">Soft Skills</option>
+                      </select>
+                      <p id="sessionTypeMessage"></p>
                     </div>
+                  </div>
+            
+            <!--file upload section-->
+            <div class="fileUpload" id="materialUpload">
+              <div class="uploadContainer" id="materialUploadContainer">
+                <label class="formLabel" for="materialFile">
+                <div class="uploadIcon"></div>
+                </label>
+                <p class="uploadText"  id="materialFileState">
+                  Drag and drop or click to browse
+                </p>
+                <p id="materialFileUploadedName"></p>
+                <label class="btn btn-secondary btn-sm" for="materialFile">Upload File</label>
+                <input type="file" name="materialFile" id="materialFile">
+                    <p id="materialFileMessage"></p>
 
-    
-                    <button id="submitBtn" class="btn btn-primary btn-sm" type="submit">Add Task</button>
-                </form>
+                </div>
+              </div>
+
+                <!--end of file upload section-->
+
+                <div>
+                  <button id="addMaterialBtn" class="btn btn-primary btn-sm" type="submit">Add Material</button>
+                </div>
+
+              </form>
             </div>
 
             <!--materials list section ----------------------------- -->
@@ -3976,9 +3831,9 @@
     
                     <!-- materials items List -->
                     <div class="materialItemsList">
-                        <article class="materialItemJs articleFiles">
-
-                            <div class="materialItem">
+                        <div class="articleFiles">
+                            <article class="materialItemJs materialItem">
+    
                                 <div class="materialInfo">
                                     <span class="materialFileName">
                                         Session 1: Introduction to HTML
@@ -3987,11 +3842,11 @@
                                 <div class="materialActions">
                                     <button class="deleteMaterialButton">Delete</button>
                                 </div>
-                            </div> 
-                        </article>
+                            </article>
+                        </div>
     
-                        <article class="materialItemJs articleFiles" style="display: none;">
-                            <div class="materialItem">
+                        <div class="articleFiles">
+                            <article class="materialItemJs materialItem" style="display: none;">
                                 <div class="materialInfo">
                                     <span class="materialFileName">
                                         Session 1: Soft Skills & Communication
@@ -4000,158 +3855,85 @@
                                 <div class="materialActions">
                                     <button class="deleteMaterialButton">Delete</button>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </section>
         </section>
 
-        <!-- Panel Section: Activity Time (Game Intro) -->
-        <section id="quiz" class="panelSection evaluateContainer">
-            <article class="workshopCard activityCard">
-                <header class="cardHeader activityHeader">
-                    <h2><i class="fas fa-gamepad"></i> ACTIVITY TIME</h2>
-                </header>
-                <div class="cardBody activityBody">
-                    <!-- Game Challenge Banner -->
-                    <div class="gameBanner">
-                        <!-- Animated Game Avatar -->
-                        <div class="gameAvatar">
-                            <div class="avatarCircle">
-                                <i class="fas fa-robot avatarIcon"></i>
-                            </div>
-                            <div class="avatarGlow"></div>
-                        </div>
-
-                        <div class="bannerIcons">
-                            <i class="fas fa-trophy bannerIcon"></i>
-                            <i class="fas fa-star bannerIcon"></i>
-                            <i class="fas fa-fire bannerIcon"></i>
-                        </div>
-                        <h3 class="gameTitle">🎮 Weekly Challenge Game! (Committee Name)</h3>
-                        <p class="gameSubtitle">Design the Challenge. Shape the Minds.</p>
-                    </div>
-
-                    <!-- Game Info Cards -->
-                    <!-- <div class="gameInfoGrid">
-                        <div class="gameInfoCard rewardCard">
-                            <div class="infoIcon">
-                                <i class="fas fa-gem"></i>
-                            </div>
-                            <div class="infoContent">
-                                <span class="infoLabel">Reward Points</span>
-                                <span class="infoValue">100 Points</span>
-                            </div>
-                        </div>
-                    </div> -->
-
-                    <!-- Motivational Message -->
-                    <div class="motivationalBox">
-                        <i class="fas fa-bullseye"></i>
-                        <p>Create quizzes that challenge, inspire, and leave a lasting impact. 🚀</p>
-                    </div>
-
-                    <!-- Play Button -->
-                    <div class="playButtonContainer">
-                        <a href="https://awadcoding.github.io/SCCI-Quiz/" class="playGameBtn">
-                            <span class="btnGlow"></span>
-                            <i class="fas fa-play"></i>
-                            <span class="btnText">START GAME NOW</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <p class="playHint">Click to enter the game arena!</p>
-                    </div>
-
-                    <!-- Stats Preview -->
-                    <div class="statsPreview">
-                        <div class="statItem">
-                            <i class="fas fa-users"></i>
-                            <span>300 Participants</span>
-                        </div>
-
-                    </div>
-                </div>
-            </article>
-        </section>
-
-
-        
     </main>
     <!-- end add materials section-->
-    
+
+
     <!-- Feedback Modal Popup (Instructor Input Form) -->
-    <div id="feedbackModal" class="reviewFeedbackPopup">
-        <div class="reviewFeedbackContainer">
+    <div id="feedbackModal" class="modalOverlay">
+        <div class="modalContainer">
             <!-- Modal Header -->
-            <div class="FeedbackContainerTop">
-                <h6>
+            <div class="modalHeader">
+                <h3>
                     <i class="fas fa-comment-dots"></i>
-                    evaluate participant
-                </h6>
-                <button class="closeFeedback" onclick="closeFeedbackModal()">
+                    Add Session Feedback
+                </h3>
+                <button class="modalCloseBtn" onclick="closeFeedbackModal()">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
 
             <!-- Modal Body -->
-            <div class="modalBody FeedbackBox">
+            <div class="modalBody">
                 <form id="feedbackForm">
 
-                    <div class="materialForm materialFormPopup"> 
-                        <label class="feedbackLabel" id="feedbackLabel" for="addFeedback">feedback:</label>
-                        <textarea class="textInput popupInput" name="addFeedback" id="addFeedback" rows="4" ></textarea>
+                <div class="materialForm"> 
+                        <label class="formLabel" id="feedbackLabel" for="addFeedback">Add feedback:</label>
+                        <textarea class="textInput" name="addFeedback" id="addFeedback" rows="5" ></textarea>
                         <p id="addFeedbackMessage"></p>
-                    </div>
-                    
-                    <!-- Task Status Section -->
-                    <div class="materialFormPopup modalMiddle">
-                        <label class="feedbackLabel">Task Status:</label>
-                        <select class="selectInput">
-                            <option value="attended">Accepted</option>
-                            <option value="absent">Rejected</option>
-                        </select>
-                                            
-                    </div>
-                     
-                    <!-- Rating Section -->
-                    <div class="materialFormPopup">
+                        </div>
+                        <!-- Rating Section -->
+                    <div class="feedbackFormGroup">
                         <label class="feedbackLabel">Rating:</label>
                         <div class="feedbackStarsInput">
                             <label for="star1">
-                                <i class="fa-regular fa-star feedbackStars" data-rating="1"></i>
+                                <i class="far fa-star" data-rating="1"></i>
                             </label>
-                            <input class="rates" type="radio" name="stars" value="1" id="star1">
+                            <input class="rates" type="radio" name="stars" id="star1">
 
                             <label for="star2">
-                                <i class="fa-regular fa-star feedbackStars" data-rating="2"></i>
+                                <i class="far fa-star" data-rating="2"></i>
                             </label>
-                            <input class="rates" type="radio" name="stars" value="2" id="star2">
+                            <input class="rates" type="radio" name="stars" id="star2">
 
                             <label for="star3">
-                                <i class="fa-regular fa-star feedbackStars" data-rating="3"></i>
+                                <i class="far fa-star" data-rating="3"></i>
                             </label>
-                            <input class="rates" type="radio" name="stars" value="3" id="star3">
+                            <input class="rates" type="radio" name="stars" id="star3">
 
                             <label for="star4">
-                                <i class="fa-regular fa-star feedbackStars" data-rating="4"></i>
+                                <i class="far fa-star" data-rating="4"></i>
                             </label>
-                            <input class="rates" type="radio" name="stars" value="4" id="star4">
+                            <input class="rates" type="radio" name="stars" id="star4">
 
                             <label for="star5">
-                                <i class="fa-regular fa-star feedbackStars" data-rating="5"></i>
+                                <i class="far fa-star" data-rating="5"></i>
                             </label>
-                            <input class="rates" type="radio" name="stars" value="5" id="star5">
+                            <input class="rates" type="radio" name="stars" id="star5">
                         </div>
                         <input type="hidden" id="ratingValue" name="rating" value="0" required>
                     </div>
                     <!-- Modal Footer -->
                     <div class="modalFooter">
-
-                        <input type="submit" class="btn-primary modalFooterBtn" value="Save Feedback" >
+                        <button class="modalCancelBtn" onclick="closeFeedbackModal()">
+                            <i class="fas fa-times"></i>
+                            Cancel
+                        </button>
+                        <!-- <button  class="modalSaveBtn" onclick="saveFeedback()">
+                            <i class="fas fa-save"></i>
+                            Save Feedback
+                        </button> -->
+                        <input type="submit" class="btn btn-primary btn-sm" value="Save Feedback" >
                         </form>
                     </div>
-                </form>
+            
             </div>
         </div>
     </div>
@@ -4160,6 +3942,8 @@
 
     <script src="assets/js/all.min.js" defer></script>
     <script src="assets/js/memberWorkshopPanel.js" defer></script>
+    <script src="assets/js/feedbackModal.js" defer></script>
+
 
 </body>
 
