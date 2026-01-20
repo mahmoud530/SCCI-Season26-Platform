@@ -89,6 +89,187 @@ document.addEventListener("keydown", (e) => {
 
 // ==============================================================
 
+// Sessions scroll
+// ==============================================================
+
+
+(function () {
+  const initializedSelectors = new WeakSet();
+
+  function initScrollButtons() {
+    console.log("=== INITIALIZING SCROLL BUTTONS ===");
+    
+    const frames = document.querySelectorAll(".sessionsSelectorFrame");
+    
+    if (frames.length === 0) {
+      console.warn("No sessionsSelectorFrame found");
+      return;
+    }
+
+    console.log(`Found ${frames.length} session frames`);
+
+    frames.forEach((frame, frameIndex) => {
+      // Skip if already initialized
+      if (initializedSelectors.has(frame)) {
+        console.log(`Frame ${frameIndex + 1} already initialized, skipping`);
+        return;
+      }
+
+      console.log(`\n--- Initializing Frame ${frameIndex + 1} ---`);
+      
+      const selector = frame.querySelector(".sessionsSelector");
+      const leftBtn = frame.querySelector(".scrollLeft");
+      const rightBtn = frame.querySelector(".scrollRight");
+
+      if (!selector || !leftBtn || !rightBtn) {
+        console.warn(`Frame ${frameIndex + 1}: Missing elements`);
+        return;
+      }
+
+      const sessions = [...selector.querySelectorAll(".sessionBtn")];
+      
+      if (sessions.length === 0) {
+        console.warn(`Frame ${frameIndex + 1}: No session buttons found`);
+        return;
+      }
+
+      console.log(`Frame ${frameIndex + 1}: Found ${sessions.length} sessions`);
+
+      // Create isolated scope for this frame
+      let currentIndex = 0;
+
+      function scrollToIndex(index) {
+        console.log(`[Frame ${frameIndex + 1}] scrollToIndex:`, index);
+        
+        index = Math.max(0, Math.min(index, sessions.length - 1));
+        currentIndex = index;
+
+        const targetSession = sessions[index];
+        
+        // Calculate scroll position
+        const scrollAmount = targetSession.offsetLeft - selector.offsetLeft;
+
+        console.log(`[Frame ${frameIndex + 1}] Scrolling to:`, scrollAmount);
+
+        selector.scrollTo({
+          left: scrollAmount,
+          behavior: "smooth"
+        });
+      }
+
+      // Right button click handler - scroll by 2 sessions
+      const handleRightClick = (e) => {
+        console.log(`[Frame ${frameIndex + 1}] RIGHT BUTTON CLICKED`);
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Scroll forward by 2 sessions
+        const newIndex = Math.min(currentIndex + 2, sessions.length - 1);
+        if (newIndex !== currentIndex) {
+          scrollToIndex(newIndex);
+        }
+      };
+
+      // Left button click handler - scroll by 2 sessions
+      const handleLeftClick = (e) => {
+        console.log(`[Frame ${frameIndex + 1}] LEFT BUTTON CLICKED`);
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // Scroll backward by 2 sessions
+        const newIndex = Math.max(currentIndex - 2, 0);
+        if (newIndex !== currentIndex) {
+          scrollToIndex(newIndex);
+        }
+      };
+
+      // Remove old listeners and add new ones
+      rightBtn.removeEventListener("click", handleRightClick);
+      leftBtn.removeEventListener("click", handleLeftClick);
+      
+      rightBtn.addEventListener("click", handleRightClick);
+      leftBtn.addEventListener("click", handleLeftClick);
+
+      // Manual scroll sync
+      let scrollTimeout;
+      selector.addEventListener("scroll", () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          const scrollPos = selector.scrollLeft;
+
+          const closest = sessions.reduce((prev, curr, i) => {
+            const prevDist = Math.abs(sessions[prev].offsetLeft - scrollPos);
+            const currDist = Math.abs(curr.offsetLeft - scrollPos);
+            return currDist < prevDist ? i : prev;
+          }, 0);
+
+          currentIndex = closest;
+        }, 100);
+      });
+
+      // Check if scrollable
+      console.log(`[Frame ${frameIndex + 1}] scrollWidth:`, selector.scrollWidth);
+      console.log(`[Frame ${frameIndex + 1}] clientWidth:`, selector.clientWidth);
+      console.log(`[Frame ${frameIndex + 1}] Is scrollable:`, selector.scrollWidth > selector.clientWidth);
+
+      // Mark as initialized
+      initializedSelectors.add(frame);
+      
+      console.log(`[Frame ${frameIndex + 1}] ✓ Initialization complete`);
+    });
+    
+    console.log("\n=== ALL FRAMES INITIALIZED ===\n");
+  }
+
+  // Initialize with delay to ensure DOM is ready and visible
+  function delayedInit() {
+    setTimeout(() => {
+      initScrollButtons();
+    }, 200);
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", delayedInit);
+  } else {
+    delayedInit();
+  }
+
+  // Re-initialize when panels become visible (for tabbed content)
+  document.addEventListener("click", (e) => {
+    // Check if a navigation link was clicked
+    if (e.target.closest(".miniNav a")) {
+      setTimeout(() => {
+        console.log("Panel switched, checking for new session frames...");
+        initScrollButtons();
+      }, 300);
+    }
+  });
+
+  // Also watch for class changes on panels
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.attributeName === "class") {
+        const target = mutation.target;
+        if (target.classList.contains("panelSectionActive")) {
+          setTimeout(() => {
+            console.log("Panel activated, re-initializing...");
+            initScrollButtons();
+          }, 100);
+        }
+      }
+    });
+  });
+
+  // Observe all panel sections
+  setTimeout(() => {
+    document.querySelectorAll(".panelSection").forEach((panel) => {
+      observer.observe(panel, { attributes: true });
+    });
+  }, 100);
+})();
+// ==============================================================
+
 // Sessions
 (function () {
   const ACTIVE_COLOR = "#1f184e";
@@ -164,6 +345,18 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==============================================================
 
 // Add Feedback form popup
+const defaultRating = 1;
+const stars = document.querySelectorAll(".feedbackStarsInput .feedbackStars");
+
+document.getElementById("ratingValue").value = defaultRating;
+document.getElementById("star1").checked = true;
+
+stars.forEach((star) => {
+  const value = Number(star.dataset.rating);
+  star.classList.toggle("fa-solid", value <= defaultRating);
+  star.classList.toggle("fa-regular", value > defaultRating);
+});
+
 document.addEventListener("click", (e) => {
   const star = e.target.closest(".feedbackStars");
   if (!star) return;
@@ -264,15 +457,19 @@ document.querySelectorAll("form#validForm").forEach((form) => {
     let isValid = true;
 
     // Task Name / Material Name
-    const taskNameInput = form.querySelector("input[name='taskName'], input[type='text']").value.trim();
+    const taskNameInput = form
+      .querySelector("input[name='taskName'], input[type='text']")
+      .value.trim();
     const taskNameMessage = form.querySelector("#taskNameMessage");
 
     // Description (only exists in task form)
-    const descriptionInput = form.querySelector("textarea[name='description']")?.value.trim() || "";
+    const descriptionInput =
+      form.querySelector("textarea[name='description']")?.value.trim() || "";
     const descriptionMessage = form.querySelector("#descriptionMessage");
 
     // Deadline (only exists in task form)
-    const deadlineInput = form.querySelector("input[name='dueDate']")?.value || "";
+    const deadlineInput =
+      form.querySelector("input[name='dueDate']")?.value || "";
     const deadlineMessage = form.querySelector("#dueDateMessage");
 
     // File
@@ -280,10 +477,10 @@ document.querySelectorAll("form#validForm").forEach((form) => {
     const fileMessage = form.querySelector(".fileMessage");
 
     // Reset previous messages
-    if(taskNameMessage) taskNameMessage.textContent = "";
-    if(descriptionMessage) descriptionMessage.textContent = "";
-    if(deadlineMessage) deadlineMessage.textContent = "";
-    if(fileMessage) fileMessage.textContent = "";
+    if (taskNameMessage) taskNameMessage.textContent = "";
+    if (descriptionMessage) descriptionMessage.textContent = "";
+    if (deadlineMessage) deadlineMessage.textContent = "";
+    if (fileMessage) fileMessage.textContent = "";
 
     // Validate Task/Material Name
     if (taskNameInput === "") {
@@ -322,7 +519,6 @@ document.querySelectorAll("form#validForm").forEach((form) => {
     }
   });
 });
-
 
 // ==============================================================
 
