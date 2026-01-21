@@ -110,19 +110,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* Event: Regular file input selection */
   /* Updates UI when a user selects a file via the browse dialog */
-  fileInput.addEventListener('change', function () {
-    if (this.files.length > 0) {
-      fileState.textContent = "File Uploaded Successfully!";
-      fileState.style.color = "green";
-      fileUploadedName.textContent = this.files[0].name;
-      fileUploadedName.style.display = "block";
-      fileMessage.textContent = "";
-    } else {
-      fileState.textContent = "Drag and drop or click to browse";
-      fileState.style.color = "";
-      fileUploadedName.style.display = "none";
-    }
-  });
+fileInput.addEventListener('change', function () {
+  if (this.files.length > 0) {
+    fileState.textContent = "File Uploaded Successfully!";
+    fileState.style.color = "green";
+    fileUploadedName.textContent = this.files[0].name;
+    fileUploadedName.style.display = "block";
+    fileMessage.textContent = "";
+
+    // 👉 هنا بقى
+    actionButtons.style.display = "block";
+
+  } else {
+    fileState.textContent = "Drag and drop or click to browse";
+    fileState.style.color = "";
+    fileUploadedName.style.display = "none";
+
+    // 👉 وهنا
+    actionButtons.style.display = "none";
+  }
+  
+});
+removeFileBtn.addEventListener('click', () => {
+  fileInput.value = "";
+  fileUploadedName.textContent = "";
+  fileUploadedName.style.display = "none";
+  fileState.textContent = "Drag and drop or click to browse";
+  fileState.style.color = "";
+  fileMessage.textContent = "";
+
+  actionButtons.style.display = "none";
+});
+
+
 
   /* Event: Prevent default drag behaviors */
   /* Stops browser from opening files dropped outside the zone */

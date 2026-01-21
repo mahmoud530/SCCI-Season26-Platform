@@ -26,10 +26,10 @@
 
 <body>
     <?php include './includes/nav.php'; ?>
-<!-- panel ----------------------------------------------------------------- -->
+    <!-- panel ----------------------------------------------------------------- -->
 
     <div class="navbar-spacer"></div>
-    
+
     <!-- Floating Background Decorations -->
     <div class="floatingDecorations">
         <i class="fas fa-star decoration-icon" style="top: 10%; left: 5%; animation-delay: 0s;"></i>
@@ -43,83 +43,52 @@
         <i class="fas fa-lightbulb decoration-icon" style="top: 45%; left: 3%; animation-delay: 3.5s;"></i>
         <i class="fas fa-certificate decoration-icon" style="top: 60%; right: 10%; animation-delay: 4.5s;"></i>
     </div>
-     
-        <div class="miniNav">
-            <div class="panelSvg">
-                <!-- left edge -->
-                <svg
-                    shape-rendering="geometricPrecision"
-                    class="panelEdge"
-                    preserveAspectRatio="none"
-                    viewBox="0 0 50 100"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path
-                        d="M50 0
+
+    <div class="miniNav">
+        <div class="panelSvg">
+            <!-- left edge -->
+            <svg shape-rendering="geometricPrecision" class="panelEdge" preserveAspectRatio="none" viewBox="0 0 50 100"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M50 0
                         C40 0 30 20 10 50
                         C30 80 40 100 50 100
-                        Z"
-                        fill="var(--color-primary-darker)"
-                        stroke="var(--color-primary-darker)"
-                        stroke-width="2"
-                        stroke-linejoin="round"
-                        stroke-linecap="round" />
-                </svg>
+                        Z" fill="var(--color-primary-darker)" stroke="var(--color-primary-darker)" stroke-width="2"
+                    stroke-linejoin="round" stroke-linecap="round" />
+            </svg>
 
-                <!-- center -->
-                <svg
-                    shape-rendering="geometricPrecision"
-                    class="panelBody"
-                    viewBox="0 0 300 100"
-                    preserveAspectRatio="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <defs>
-                        <linearGradient id="fillCenter" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" stop-color="var(--color-primary-darker)" />
-                            <stop offset="50%" stop-color="var(--color-primary)" />
-                            <stop offset="100%" stop-color="var(--color-primary-darker)" />
-                        </linearGradient>
-                    </defs>
+            <!-- center -->
+            <svg shape-rendering="geometricPrecision" class="panelBody" viewBox="0 0 300 100" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                    <linearGradient id="fillCenter" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="var(--color-primary-darker)" />
+                        <stop offset="50%" stop-color="var(--color-primary)" />
+                        <stop offset="100%" stop-color="var(--color-primary-darker)" />
+                    </linearGradient>
+                </defs>
 
-                    <rect
-                        x="0"
-                        y="0"
-                        width="300"
-                        height="100"
-                        fill="url(#fillCenter)"
-                        stroke="var(--color-primary-darker)"
-                        stroke-width="2" />
-                </svg>
+                <rect x="0" y="0" width="300" height="100" fill="url(#fillCenter)" stroke="var(--color-primary-darker)"
+                    stroke-width="2" />
+            </svg>
 
-                <!-- right edge -->
-                <svg
-                    shape-rendering="geometricPrecision"
-                    class="panelEdge"
-                    preserveAspectRatio="none"
-                    viewBox="0 0 50 100"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path
-                        d="M0 0
+            <!-- right edge -->
+            <svg shape-rendering="geometricPrecision" class="panelEdge" preserveAspectRatio="none" viewBox="0 0 50 100"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M0 0
                         C10 0 20 20 40 50
                         C20 80 10 100 0 100
-                        Z"
-                        fill="var(--color-primary-darker)"
-                        stroke="var(--color-primary-darker)"
-                        stroke-width="2"
-                        stroke-linejoin="round"
-                        stroke-linecap="round" />
-                </svg>
-            </div>
-
-            <!-- Name the "data-page" in the mini nav the same as its section -->
-            <a data-page="evaluate" class="activePanelLine">view task</a>
-            <a data-page="review" class="">review Task</a>
-            <a data-page="addTask" class="">materials</a>
-            <a data-page="addMaterial" class="">activity time </a>
+                        Z" fill="var(--color-primary-darker)" stroke="var(--color-primary-darker)" stroke-width="2"
+                    stroke-linejoin="round" stroke-linecap="round" />
+            </svg>
         </div>
-        
+
+        <!-- Name the "data-page" in the mini nav the same as its section -->
+        <a data-page="evaluate" class="activePanelLine">view task</a>
+        <a data-page="review" class="">review Task</a>
+        <a data-page="addTask" class="">materials</a>
+        <a data-page="addMaterial" class="">activity time </a>
+    </div>
+
     <!-- Main Workshop Panel Section -->
     <section class="workshopPanelSection">
         <div class="container">
@@ -190,38 +159,50 @@
                 </article>
 
                 <!-- Submit Task Form Section -->
-                <form class="fileUpload" id="validForm" action="" method="post" enctype="multipart/form-data">
-                    <!-- Upload Header -->
-                    <div class="uploadHeader">
-                        <h3 class="uploadSectionTitle">Submit Task</h3>
-                    </div>
-                    <!-- Upload Container -->
-                    <div class="uploadContainer" id="taskUploadContainer">
-                        <label class="formLabel" for="taskFile">
-                            <div class="uploadIcon">
-                                <i class="fas fa-arrow-down"></i>
-                            </div>
-                            <h4 class="uploadTitle">Upload File</h4>
-                            <p class="uploadText" id="fileUploadState">
-                                Drag and drop or click to browse
-                            </p>
-                        </label>
+                <!-- Submit Task Form Section -->
+            <form class="fileUpload" id="validForm" action="" method="post" enctype="multipart/form-data">
+            <div class="uploadCard">
+                <!-- Upload Header -->
+                <div class="uploadHeader">
+             h3<class="uploadSectionTitle">Submit Task</h3>
+                </div>
 
-                        <p id="fileUploadedName"></p>
-                        <!-- Hidden File Input -->
-                        <input type="file" name="taskFile" id="taskFile">
+        <!-- Upload Container -->
+        <div class="uploadContainer" id="taskUploadContainer">
+            <label class="formLabel" for="taskFile">
+                <div class="uploadIcon">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <h4 class="uploadTitle">Upload File</h4>
+                <p class="uploadText" id="fileUploadState">
+                    Drag and drop or click to browse
+                </p>
+            </label>
 
-                        <p id="fileMessage"></p>
-                    </div>
+            <p id="fileUploadedName"></p>
 
-                    <!-- Submit Button -->
-                    <div style="text-align: center; padding: var(--space-5) var(--space-8) var(--space-7);">
-                        <button type="submit" class="btn btn-primary" style="min-width: 200px;">
-                            <i class="fas fa-upload"></i>
-                            Submit Task
-                        </button>
-                    </div>
-                </form>
+            <!-- Hidden File Input -->
+            <input type="file" name="taskFile" id="taskFile">
+
+            <p id="fileMessage"></p>
+        </div>
+    </div>
+</form>
+    <!-- Action Buttons (hidden by default) -->
+    <div id="actionButtons"
+         style="display:none; text-align:center; padding: var(--space-5) var(--space-8) var(--space-7);">
+
+        <button type="submit" class="btn btn-primary me-3" style="min-width:200px;">
+            <i class="fas fa-upload"></i>
+            Remove
+        </button>
+
+        <button type="button" class="btn btn-secondary me-3" id="removeFileBtn" style="min-width:200px;">
+            <i class="fas fa-trash"></i>
+            Submit Task
+        </button>
+    </div>
+
             </div>
 
             <!-- Panel Section: Review Task -->
@@ -487,7 +468,8 @@
                         <!-- Motivational Message -->
                         <div class="motivationalBox">
                             <i class="fas fa-bullseye"></i>
-                            <p><strong>Ready to prove yourself?</strong> Challenge your skills and climb the leaderboard! 🚀</p>
+                            <p><strong>Ready to prove yourself?</strong> Challenge your skills and climb the
+                                leaderboard! 🚀</p>
                         </div>
 
                         <!-- Play Button -->
@@ -537,7 +519,7 @@
                     <span class="feedbackSessionLabel">Session:</span>
                     <span id="feedbackSessionName" class="feedbackSessionValue">Session 1</span>
                 </div>
-                
+
                 <!-- Rating -->
                 <div class="feedbackRating">
                     <span class="feedbackLabel">Rating:</span>
@@ -554,9 +536,11 @@
                 <div class="feedbackContent">
                     <p class="feedbackLabel"><i class="fas fa-comment-alt"></i> Feedback Message:</p>
                     <div id="feedbackText" class="feedbackTextArea">
-                        <p>Great work on your HTML structure! Your code is clean and well-organized. However, I noticed a few areas for improvement:</p>
+                        <p>Great work on your HTML structure! Your code is clean and well-organized. However, I noticed
+                            a few areas for improvement:</p>
                         <ul>
-                            <li>Use semantic HTML elements more consistently (e.g., &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;)</li>
+                            <li>Use semantic HTML elements more consistently (e.g., &lt;header&gt;, &lt;nav&gt;,
+                                &lt;main&gt;)</li>
                             <li>Add more descriptive class names for better maintainability</li>
                             <li>Consider adding comments to complex sections</li>
                         </ul>
