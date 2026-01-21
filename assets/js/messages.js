@@ -33,6 +33,7 @@ function showMessage(text, type = 'info', duration = 3000) {
     });
 }
 
+
 // Display messages from URL parameters on page load
 document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);

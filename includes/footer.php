@@ -7,6 +7,7 @@
       <h3>Quick Links</h3>
       <section>
         
+      
         <a href="./home.php">home</a>
         <a href="./about.php">about us</a>
         <a href="./gallery.php">gallery</a>

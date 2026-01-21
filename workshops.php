@@ -20,6 +20,7 @@
     <!-- Font Awesome (Standard CDN) -->
     <link rel="stylesheet" href="assets/css/all.min.css" />
 
+    
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/root.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="assets/css/navbar.css?v=<?php echo time(); ?>">

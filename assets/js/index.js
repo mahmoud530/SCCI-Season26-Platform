@@ -6,6 +6,7 @@ if (scrollTopBtn) {
   // Get the first section to determine when to show the button
   const firstSection = document.querySelector('.workshopsHero');
 
+  
   window.addEventListener('scroll', () => {
     if (firstSection) {
       const firstSectionHeight = firstSection.offsetHeight;

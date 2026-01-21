@@ -128,6 +128,7 @@ if (isset($_GET['category_id'])) {
         <!--  -->
 
 
+        
         <!-- members in this workshop -->
 
         <section class="workshopsSection" data-aos="fade-up" data-aos-duration="1000">

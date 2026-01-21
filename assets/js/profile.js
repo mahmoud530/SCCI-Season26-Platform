@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (isOpen) return;
 
     
+    
     settingsMenu.classList.remove('closing');
     settingsMenu.classList.add('opening');
     isOpen = true;

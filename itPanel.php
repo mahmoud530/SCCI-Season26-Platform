@@ -32,6 +32,7 @@
         exit();
     }
 
+    
     if (isset($_GET['delete'])) {
         $id = intval($_GET['delete']);
 

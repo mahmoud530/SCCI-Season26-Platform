@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Error Containers
     
+    
     const errorName = document.getElementById('error-name');
     const errorEmail = document.getElementById('error-email');
     const errorPhone = document.getElementById('error-phone');

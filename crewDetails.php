@@ -30,6 +30,7 @@
         $run_committee = mysqli_query($connect, $select_committee);
         $committee = mysqli_fetch_assoc($run_committee);
 
+        
         // Fetch head details
         $head_id = $committee['head_id'];
         $select_head = "SELECT user_id, user_name, image 

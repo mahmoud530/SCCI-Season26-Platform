@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     
+    
     const eventsData = EVENT_NAMES.reduce((acc, name) => {
         acc[name] = {
             book: {

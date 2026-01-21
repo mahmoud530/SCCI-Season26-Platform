@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   
+  
   const flipCards = document.querySelectorAll(".flipCard");
 
   flipCards.forEach(card => {

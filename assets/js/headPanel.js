@@ -6,6 +6,7 @@ const memberBtn = document.querySelector('.member');
 const participantsSchedule = document.getElementById('participantsSchedule');
 const membersSchedule = document.getElementById('membersSchedule');
 
+
 // get current section from URL parameter
 const urlParams = new URLSearchParams(window.location.search);
 const currentSection = urlParams.get('section') || 'participants';

@@ -40,6 +40,7 @@ if (isset($_GET['user_id'])) {
   $user_id = $_GET['user_id'];  
 }
 
+
 // Fetch user data using prepared statement
 $select_user = "SELECT u.user_name, u.email, u.image, u.githup, u.phone, u.password, u.linkedin, u.role, c.committe_name, w.workshop_name 
                 FROM users u 

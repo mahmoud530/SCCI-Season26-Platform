@@ -43,6 +43,7 @@ if (isset($_SESSION['user_id'])) {
         <img src="/SCCI-Season26-Platform/assets/icons/logoSCCI.png" alt="SCCI logo" loading="lazy" />
         <h1 id="logo">SCCI</h1>
     </a>
+    
     <nav class="navLinks navRespnsive">
         <a href="/SCCI-Season26-Platform/home.php" id="homeNavLine">home</a>
         <a href="/SCCI-Season26-Platform/about.php" id="aboutNavLine">about us</a>

@@ -15,5 +15,6 @@ if(isset($_POST['logout'])) {
     unset($_SESSION['user_id']);
     header('location:./auth/login.php');
 
+    
 }
 ?>

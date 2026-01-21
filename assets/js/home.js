@@ -6,6 +6,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  
   /* ===============================
      AOS INITIALIZATION
   ================================ */

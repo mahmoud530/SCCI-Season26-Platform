@@ -8,6 +8,7 @@
     <title>Seek The Peak</title>
     <link rel="icon" href="./assets/icons/logoSCCI.png" type="image/png">
 
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Stencil&display=swap" rel="stylesheet">

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!form) return;
 
+  
   form.addEventListener("submit", (e) => {
     let isValid = true;
 

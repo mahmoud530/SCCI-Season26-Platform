@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const contentBlocks = document.querySelectorAll('.contentBlock');
 
     
+    
     if (journeyBtns.length > 0 && contentBlocks.length > 0) {
         journeyBtns.forEach(btn => {
             btn.addEventListener('click', function () {

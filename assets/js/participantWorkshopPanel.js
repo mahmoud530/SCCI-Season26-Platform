@@ -11,6 +11,7 @@ function activatePage(pageId) {
 
   // activate panel
   
+  
   pages.forEach((page) => {
     page.classList.toggle("panelSectionActive", page.id === pageId);
   });

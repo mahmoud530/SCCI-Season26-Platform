@@ -4,6 +4,7 @@ body {
   padding-top: calc(8vh + 3rem);
 }
 
+
 .sectionBlock {
   padding: var(--space-8) 0;
 }
