@@ -97,98 +97,77 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ================== FILE UPLOAD HANDLING ================== */
-  /* Manages file selection, drag & drop, and validation */
   const uploadContainer = document.querySelector('.uploadContainer');
   const fileInput = document.getElementById('taskFile');
   const fileMessage = document.getElementById('fileMessage');
-  const fileState = document.getElementById('fileUploadState');
   const fileUploadedName = document.getElementById('fileUploadedName');
   const submitForm = document.getElementById('validForm');
+  const actionButtons = document.getElementById('actionButtons');
+  const removeBtn = document.getElementById('removeFileBtn');
+  const formLabel = document.querySelector('.formLabel');
 
-  fileMessage.textContent = "";
+  /* Event: File Selection Change */
+  fileInput.addEventListener('change', function () {
+    if (this.files.length > 0) {
+      // Update Name Display
+      fileUploadedName.textContent = this.files[0].name;
+      fileUploadedName.style.display = "block";
 
+      // Toggle UI Sections
+      formLabel.style.display = "none";
+      actionButtons.style.display = "flex";
 
-  /* Event: Regular file input selection */
-  /* Updates UI when a user selects a file via the browse dialog */
-fileInput.addEventListener('change', function () {
-  if (this.files.length > 0) {
-    fileState.textContent = "File Uploaded Successfully!";
-    fileState.style.color = "green";
-    fileUploadedName.textContent = this.files[0].name;
-    fileUploadedName.style.display = "block";
-    fileMessage.textContent = "";
-
-    // 👉 هنا بقى
-    actionButtons.style.display = "block";
-
-  } else {
-    fileState.textContent = "Drag and drop or click to browse";
-    fileState.style.color = "";
-    fileUploadedName.style.display = "none";
-
-    // 👉 وهنا
-    actionButtons.style.display = "none";
-  }
-  
-});
-removeFileBtn.addEventListener('click', () => {
-  fileInput.value = "";
-  fileUploadedName.textContent = "";
-  fileUploadedName.style.display = "none";
-  fileState.textContent = "Drag and drop or click to browse";
-  fileState.style.color = "";
-  fileMessage.textContent = "";
-
-  actionButtons.style.display = "none";
-});
-
-
-
-  /* Event: Prevent default drag behaviors */
-  /* Stops browser from opening files dropped outside the zone */
-  ['dragover', 'drop'].forEach(eventName => {
-    uploadContainer.addEventListener(eventName, e => {
-      e.preventDefault();
-      e.stopPropagation();
-    });
-  });
-
-  /* Event: Drag Over */
-  /* Adds visual cue when file is dragged over the drop zone */
-  uploadContainer.addEventListener('dragover', () => {
-    uploadContainer.classList.add('drag-over');
-  });
-
-  /* Event: File Drop */
-  /* Handles the file drop, updates input, and triggers change event */
-  uploadContainer.addEventListener('drop', (e) => {
-    uploadContainer.classList.remove('drag-over');
-
-    const files = e.dataTransfer.files;
-
-    if (files.length > 0) {
-      const dataTransfer = new DataTransfer();
-      dataTransfer.items.add(files[0]);
-      fileInput.files = dataTransfer.files;
-
-      fileInput.dispatchEvent(
-        new Event('change', { bubbles: true })
-      );
+      // Clear any previous messages
+      fileMessage.textContent = "";
+    } else {
+      resetUploadUI();
     }
   });
 
-  /* ================== FORM SUBMIT VALIDATION ================== */
-  /* Ensures a file is selected before allowing form submission */
-  submitForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  /* Function to reset UI to initial state */
+  function resetUploadUI() {
+    fileInput.value = "";
+    fileUploadedName.style.display = "none";
+    formLabel.style.display = "flex";
+    actionButtons.style.display = "none";
+  }
 
+  /* Event: Remove Button Click */
+  if (removeBtn) {
+    removeBtn.addEventListener('click', function () {
+      resetUploadUI();
+
+      // Success removal message
+      fileMessage.textContent = "file removed";
+      fileMessage.style.color = "var(--color-success, #28a745)";
+      fileMessage.style.fontWeight = "bold";
+      fileMessage.style.marginTop = "10px";
+      fileMessage.style.textAlign = "center";
+    });
+  }
+
+  /* Event: Form Submission */
+  submitForm.addEventListener('submit', (e) => {
     if (!fileInput.files.length) {
+      e.preventDefault();
       fileMessage.textContent = "Please upload a file.";
       fileMessage.style.color = "red";
       return;
     }
 
-    submitForm.submit();
+    // Success submission message logic (Visual feedback before actual submit)
+    // If you want to see the message before the page reloads:
+    e.preventDefault();
+    fileMessage.textContent = "file submited";
+    fileMessage.style.color = "var(--color-success, #28a745)";
+    fileMessage.style.fontWeight = "bold";
+    fileMessage.style.marginTop = "10px";
+    fileMessage.style.textAlign = "center";
+
+    // Optional: Actually submit after a delay so user sees the message
+    setTimeout(() => {
+      submitForm.submit();
+    }, 1500);
   });
 
   /* ================== MATERIAL CATEGORY SWITCHING ================== */

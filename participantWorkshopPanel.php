@@ -160,48 +160,46 @@
 
                 <!-- Submit Task Form Section -->
                 <!-- Submit Task Form Section -->
-            <form class="fileUpload" id="validForm" action="" method="post" enctype="multipart/form-data">
-            <div class="uploadCard">
-                <!-- Upload Header -->
-                <div class="uploadHeader">
-             h3<class="uploadSectionTitle">Submit Task</h3>
-                </div>
+                <form class="fileUpload" id="validForm" action="" method="post" enctype="multipart/form-data">
+                    <div class="uploadCard">
+                        <!-- Upload Header -->
+                        <div class="uploadHeader">
+                            <h3 class="uploadSectionTitle">Submit Task</h3>
+                        </div>
 
-        <!-- Upload Container -->
-        <div class="uploadContainer" id="taskUploadContainer">
-            <label class="formLabel" for="taskFile">
-                <div class="uploadIcon">
-                    <i class="fas fa-arrow-down"></i>
-                </div>
-                <h4 class="uploadTitle">Upload File</h4>
-                <p class="uploadText" id="fileUploadState">
-                    Drag and drop or click to browse
-                </p>
-            </label>
+                        <!-- Upload Container -->
+                        <div class="uploadContainer" id="taskUploadContainer">
+                            <label class="formLabel" for="taskFile">
+                                <div class="uploadIcon">
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <h4 class="uploadTitle">Upload File</h4>
+                                <p class="uploadText" id="fileUploadState">
+                                    Drag and drop or click to browse
+                                </p>
+                            </label>
 
-            <p id="fileUploadedName"></p>
+                            <p id="fileUploadedName"></p>
 
-            <!-- Hidden File Input -->
-            <input type="file" name="taskFile" id="taskFile">
+                            <!-- Hidden File Input -->
+                            <input type="file" name="taskFile" id="taskFile">
 
-            <p id="fileMessage"></p>
-        </div>
-    </div>
-</form>
-    <!-- Action Buttons (hidden by default) -->
-    <div id="actionButtons"
-         style="display:none; text-align:center; padding: var(--space-5) var(--space-8) var(--space-7);">
+                            <div id="fileMessage"></div>
+                        </div>
+                    </div>
+                    <div id="actionButtons"
+                        style="display:none; justify-content:center; flex-wrap:wrap; gap:var(--space-4); padding: var(--space-5);">
+                        <button type="button" class="btn btn-danger" id="removeFileBtn" style="min-width:200px;">
+                            <i class="fas fa-trash-alt"></i>
+                            Remove
+                        </button>
 
-        <button type="submit" class="btn btn-primary me-3" style="min-width:200px;">
-            <i class="fas fa-upload"></i>
-            Remove
-        </button>
-
-        <button type="button" class="btn btn-secondary me-3" id="removeFileBtn" style="min-width:200px;">
-            <i class="fas fa-trash"></i>
-            Submit Task
-        </button>
-    </div>
+                        <button type="submit" class="btn btn-secondary" id="submitTaskBtn" style="min-width:200px;">
+                            <i class="fas fa-upload"></i>
+                            Submit Task
+                        </button>
+                    </div>
+                </form>
 
             </div>
 
